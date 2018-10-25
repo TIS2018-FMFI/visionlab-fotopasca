@@ -1,0 +1,10 @@
+CONFIGURATION A PERSISTENTNE DATA
+
+
+Udaje o konfiguracii sa  budu ukladat v class Configuration, ktora sa bude ukladat
+prostrednictvom modulu pickle. 
+
+Okrem konfiguracie budeme ukladat subory s videami pomocou kniznice opencv do priecinku
+na to urceneho
+
+
