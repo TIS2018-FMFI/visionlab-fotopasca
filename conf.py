@@ -21,7 +21,7 @@ class TimelapsSettings:
 
 @dataclass
 class VideoSettings:
-    resolution : Tuple[int, int]
+    enabled : bool
     capture_rate : int
     
 @dataclass
@@ -33,17 +33,24 @@ class EmailSettings:
 class AlarmSettings:
     emergency_recording : bool
     sound_alarm : bool
+    delay : int
+    soundAfterEvent : int
 
+@dataclass
+class SystemSettings:
+    skip_configuration : bool 
+    password : str
+    initDelay : int
+    resolution : Tuple[int, int]
+    videoFolder : str
 
-class Configuration: 
-    skip_configuration : bool = False
-    
+class Configuration:
+    system : SystemSettings = None
     timelaps : TimelapsSettings = None
     video : VideoSettings = None
     email : EmailSettings = None
     alarm : AlarmSettings = None
-
-    password : str = ""
+    
     regions_of_interest : List[RegionOfInterest] = []
 
 
@@ -53,9 +60,10 @@ class Configuration:
 if __name__ == "__main__":
     conf = Configuration()
     conf.timelaps = TimelapsSettings(False, 10)
-    conf.video = VideoSettings((1000,200),20)
+    conf.video = VideoSettings(False,20)
     conf.email = EmailSettings(False, "somefake@email.miro")
-    conf.alarm = AlarmSettings(False, False)
+    conf.alarm = AlarmSettings(False, False,0,0)
+    conf.system = SystemSettings(False,"",0,(0,0),"")
     conf.regions_of_interest = [RegionOfInterest(Point(0,0),Point(0,0),[],10)]
  
     with open("test.data", "wb") as output:
