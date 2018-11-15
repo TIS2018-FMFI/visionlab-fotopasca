@@ -1,0 +1,4 @@
+2018-11-15 09:58:31.643532_10.5_RegionOfInterest(start=Point(X=0, Y=0), end=Point(X=0, Y=0), ignored_areas=[], sensitivity=10)#1
+2018-11-15 10:00:10.470470_10.5_RegionOfInterest(start=Point(X=0, Y=0), end=Point(X=0, Y=0), ignored_areas=[], sensitivity=10)#1
+2018-11-15 10:00:37.225071_10.5_RegionOfInterest(start=Point(X=0, Y=0), end=Point(X=0, Y=0), ignored_areas=[], sensitivity=10)#1
+2018-11-15 10:01:58.854533_10.5_RegionOfInterest(start=Point(X=0, Y=0), end=Point(X=0, Y=0), ignored_areas=[], sensitivity=10)#1
