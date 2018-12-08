@@ -41,7 +41,7 @@ class ConfigurationWindow:
         self.resVar = StringVar(self.root)
         resolution = str(self.gui.config.system.resolution[0]) + "x" + str(self.gui.config.system.resolution[1])
         self.resVar.set(resolution)
-        self.resolution = OptionMenu(resFrame, self.resVar, "1280x720", "960x540", "640x360")
+        self.resolution = OptionMenu(resFrame, self.resVar, "1280x720", "960x540")
         self.resolution.config(bg="lightgray")
         self.resolution.pack(side=LEFT)
         resFrame.grid(row=2, column=0, padx=10, pady=(0,20))

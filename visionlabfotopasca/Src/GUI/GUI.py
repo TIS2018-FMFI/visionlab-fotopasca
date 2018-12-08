@@ -1,4 +1,5 @@
-from Src.Configuration.conf import Configuration
+from Src.Configuration.conf import Configuration, RegionOfInterest, Point
+from Src.GUI.CVGui.CVRoi import CVRoi
 from Src.GUI.TKGui.ConfigurationWindow import ConfigurationWindow
 from Src.GUI.CVGui.RuntimeWindow import RuntimeWindow
 from Src.GUI.CVGui.RoiWindow import RoiWindow
@@ -15,6 +16,8 @@ class GUI:
         self.manager = manager
         self.config: Configuration = config
         self.window = None
+        self.rois = list()
+        self.loadRois()
 
     def configurationWindow(self):
         self.window = ConfigurationWindow(self)
@@ -24,5 +27,22 @@ class GUI:
 
     def runtimeWindow(self):
         self.window = RuntimeWindow(self)
+
+    def loadRois(self):
+        self.rois = list()
+        for roi in self.config.regions_of_interest:
+            r = CVRoi()
+            r.ux = roi.start.X
+            r.uy = roi.start.Y
+            r.dx = roi.end.X
+            r.dy = roi.end.Y
+            self.rois.append(r)
+
+    def saveRois(self):
+        regions = list()
+        for roi in self.rois:
+            r = RegionOfInterest(0, [], Point(roi.ux, roi.uy), Point(roi.dx, roi.dy))
+            regions.append(r)
+        self.config.regions_of_interest = regions
 
 

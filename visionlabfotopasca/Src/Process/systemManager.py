@@ -12,7 +12,6 @@ class SystemManager:
 
     def __init__(self):
         self.config: Configuration = load()
-        print(self.config.system.resolution)
         self.logger: Logger = Logger()
         self.recorder: Recorder = Recorder(self.config)
         self.controller: Controller = Controller(self.config)
@@ -57,6 +56,5 @@ class SystemManager:
         self.recorder.append(frame)
         movements = self.controller.isMovement(frame)
         ## for id, isMovement in movements:
-
 
 SystemManager().start(10, [])
