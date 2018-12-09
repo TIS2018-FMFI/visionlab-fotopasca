@@ -1,4 +1,5 @@
 from Src.Configuration.conf import Configuration, RegionOfInterest, Point
+from Src.GUI.Alarm import Alarm
 from Src.GUI.CVGui.CVRoi import CVRoi
 from Src.GUI.TKGui.ConfigurationWindow import ConfigurationWindow
 from Src.GUI.CVGui.RuntimeWindow import RuntimeWindow
@@ -18,6 +19,7 @@ class GUI:
         self.window = None
         self.rois = list()
         self.loadRois()
+        self.alarm = Alarm()
 
     def configurationWindow(self):
         self.window = ConfigurationWindow(self)

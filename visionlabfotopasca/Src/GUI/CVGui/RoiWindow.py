@@ -24,6 +24,8 @@ class RoiWindow(CVWindow):
         self.prepareFrame()
         self.drawUI()
         cv2.imshow('PhotoTrap', self.root)
+        if self.slider.value() == 100:
+            self.gui.alarm.play()
 
     def prepareFrame(self):
         self.root = cv2.resize(self.root, (self.width, self.height))
