@@ -11,18 +11,17 @@ class Point:
 class RegionOfInterest:
     sensitivity: int
     ignored_areas: List[Tuple[Point, Point]]
-    end: Point = Point(0, 0)
     start: Point = Point(0, 0)
+    end: Point = Point(0, 0)
 
 @dataclass
-class TimelapsSettings:
+class TimelapseSettings:
     enabled: bool
     capture_speed: int
 
 @dataclass
 class VideoSettings:
     enabled: bool
-    capture_rate: int
     
 @dataclass
 class EmailSettings:
@@ -31,34 +30,36 @@ class EmailSettings:
 
 @dataclass
 class AlarmSettings:
-    emergency_recording: bool
-    sound_alarm: bool
+    enabled: bool
     delay: int
-    soundAfterEvent: int
+    duration: int
 
 @dataclass
 class SystemSettings:
-    skip_configuration: bool
+    skip: bool
     password: str
     initDelay: int
     resolution: Tuple[int, int]
     videoFolder: str
+    fps: int
 
 
 #@dataclass
 class Configuration:
-    system: SystemSettings = SystemSettings(False, None, 10, None, "video")
-    timelaps: TimelapsSettings = TimelapsSettings(False, 10)
-    video: VideoSettings = VideoSettings(False, 25)
-    email: EmailSettings = EmailSettings(False, None)
-    alarm: AlarmSettings = AlarmSettings(False, False, 0)
-    regions_of_interest: List[RegionOfInterest] = [RegionOfInterest()]
 
-CONF_FILE = "..\\res\conf.obj"
+    def __init__(self):
+        self.system: SystemSettings = SystemSettings(False, "pass", 10, (1280, 720), "video", 40)
+        self.timelapse: TimelapseSettings = TimelapseSettings(True, 30)
+        self.video: VideoSettings = VideoSettings(True)
+        self.email: EmailSettings = EmailSettings(False, None)
+        self.alarm: AlarmSettings = AlarmSettings(True, 5, 10)
+        self.regions_of_interest: List[RegionOfInterest] = [RegionOfInterest(0,[])]
+
+CONF_FILE = "../../res/conf.obj"
 
 def save(c: Configuration):
     with open(CONF_FILE, "wb") as output:
-        pickle.dump(conf, output, pickle.HIGHEST_PROTOCOL)
+        pickle.dump(c, output, pickle.HIGHEST_PROTOCOL)
 
 def load() -> Configuration:
     conf = None

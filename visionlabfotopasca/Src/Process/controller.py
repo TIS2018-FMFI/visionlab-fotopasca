@@ -10,7 +10,7 @@ class Controller:
         self.lastFrame = None
         self.config: Configuration = c
 
-    def isMovement(self, frame) -> Dict[int: bool] :
+    def isMovement(self, frame):
         ## kluc je id oblasti hodnota je bool
         res = dict()
 
