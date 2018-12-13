@@ -33,7 +33,7 @@ class RoiWindow(CVWindow):
         cv2.putText(self.root, 'Q pre zavretie...', (20, self.height - 25), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1, cv2.LINE_AA)
         if self.sel is not None:
             self.btnDel.draw(self.root)
-            info = "ux:" + str(self.sel.ux) + " uy:" + str(self.sel.uy) + " dx:" + str(self.sel.dx) + " dy:" + str(self.sel.dy)
+            info = "x1:" + str(self.sel.x1) + " y1:" + str(self.sel.y1) + " x2:" + str(self.sel.x2) + " y2:" + str(self.sel.y2)
             cv2.putText(self.root, info, (20, self.height - 45), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1, cv2.LINE_AA)
         self.new.draw(self.root)
         for roi in self.gui.rois:
@@ -77,8 +77,8 @@ class RoiWindow(CVWindow):
 
         else:
             self.drawing = True
-            self.new.ux = self.new.dx = x
-            self.new.uy = self.new.dy = y
+            self.new.x1 = self.new.x2 = x
+            self.new.y1 = self.new.y2 = y
 
     def leftMouseButtonUp(self):
         if self.new.isValid():
@@ -90,18 +90,20 @@ class RoiWindow(CVWindow):
     def leftMouseButtonDoubleClick(self, x, y):
         self.sel = None
         for roi in reversed(self.gui.rois):
-            #print("Roi: (" + str(roi.ux) + "," + str(roi.uy) + "), (" + str(roi.dx) + "," + str(roi.dy) + ")")
-            #print("Click: " + str(x) + "," + str(y))
+            print("Roi: (" + str(roi.x1) + "," + str(roi.y1) + "), (" + str(roi.x2) + "," + str(roi.y2) + ")")
+            print("Click: " + str(x) + "," + str(y))
             if roi.isInside(x, y):
                 self.sel = roi
                 self.slider.setValue(roi.sensitivity)
                 break
 
     def mouseMove(self, x, y):
+        if x < 0 or y < 0 or x > self.width or y > self.height:
+            return
+        if self.drawing and y < self.height - 80:
+            self.new.x2 = x
+            self.new.y2 = y
         self.btnConfig.mouseHover(x, y)
         self.btnOn.mouseHover(x, y)
         self.btnDel.mouseHover(x, y)
         self.slider.mouseMove(x, y, self.sel)
-        if self.drawing:
-            self.new.dx = x
-            self.new.dy = y

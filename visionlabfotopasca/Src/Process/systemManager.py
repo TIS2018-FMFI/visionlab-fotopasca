@@ -10,7 +10,6 @@ from Src.Saver.recorder import Recorder
 
 
 class SystemManager:
-
     CV_CAP_PROP_FRAME_WIDTH = 3
     CV_CAP_PROP_FRAME_HEIGHT = 4
     CV_CAP_PROP_FPS = 5
@@ -21,25 +20,25 @@ class SystemManager:
         self.recorder: Recorder = Recorder(self.config)
         self.controller: Controller = Controller(self.config)
         self.gui: GUI = GUI(self, self.config)
-        self.cap = cv2.VideoCapture(0)
         self.alarm = Alarm()
 
-    def start(self, fps: int, functions: List):
-
+    def start(self):
         if self.config.system.skip:
             self.gui.STATE = self.gui.ROI_STATE
 
-        while(self.gui.STATE != self.gui.TERMINATE_STATE):
+        while self.gui.STATE != self.gui.TERMINATE_STATE:
             if self.gui.STATE == self.gui.CONFIG_STATE:
                 cv2.destroyAllWindows()
                 self.gui.configurationWindow()
                 save(self.config)
             elif self.gui.STATE == self.gui.ROI_STATE:
+                self.cap = cv2.VideoCapture(0)
                 self.setCamera()
                 self.roiMenu()
                 self.gui.saveRois()
                 save(self.config)
             elif self.gui.STATE == self.gui.RUNTIME_STATE:
+                self.cap = cv2.VideoCapture(0)
                 self.runtimeMenu()
 
         self.cap.release()
@@ -54,7 +53,7 @@ class SystemManager:
     def roiMenu(self):
         self.gui.roiWindow()
 
-        while (self.gui.STATE == self.gui.ROI_STATE):
+        while self.gui.STATE == self.gui.ROI_STATE:
             ret, frame = self.cap.read()
             self.gui.window.loop(frame)
             if cv2.waitKey(1) & 0xFF == ord('q'):
@@ -63,13 +62,12 @@ class SystemManager:
     def runtimeMenu(self):
         self.gui.runtimeWindow()
 
-        while (self.gui.STATE == self.gui.RUNTIME_STATE):
+        while self.gui.STATE == self.gui.RUNTIME_STATE:
             ret, frame = self.cap.read()
             self.gui.window.loop(frame)
             move = self.controller.isMovement(frame)
             if move:
                 self.alarm.play()
-                print("alarm")
 
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 self.gui.STATE = self.gui.TERMINATE_STATE
@@ -80,4 +78,4 @@ class SystemManager:
         movements = self.controller.isMovement(frame)
         ## for id, isMovement in movements:
 
-SystemManager().start(10, [])
+SystemManager().start()

@@ -34,13 +34,12 @@ class Controller:
 
                 # spravime treshlold podla sensitivity
                 ret, thresh = cv2.threshold(rio_img,roi.sensitivity,255,cv2.THRESH_BINARY)
-                cv2.imshow("test", thresh)
                 # percentualna zmena
                 count = np.sum(thresh)
                 count = int(count)
                 percentage_change = (count / 255) / ((roi.end.Y - roi.start.Y) * (roi.end.X - roi.start.X)) * 1000
 
-                print(percentage_change)
+                # print(percentage_change)
                 # aka zmena presiahla 30 percent nastala udalost co zaznacime
                 if percentage_change > 100 - roi.sensitivity:
                     flag = True

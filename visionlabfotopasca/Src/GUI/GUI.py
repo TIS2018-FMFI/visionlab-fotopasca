@@ -32,17 +32,17 @@ class GUI:
         self.rois = list()
         for roi in self.config.regions_of_interest:
             r = CVRoi()
-            r.ux = roi.start.X
-            r.uy = roi.start.Y
-            r.dx = roi.end.X
-            r.dy = roi.end.Y
+            r.x1 = roi.start.X
+            r.y1 = roi.start.Y
+            r.x2 = roi.end.X
+            r.y2 = roi.end.Y
             r.sensitivity = roi.sensitivity
             self.rois.append(r)
 
     def saveRois(self):
         regions = list()
         for roi in self.rois:
-            r = RegionOfInterest(roi.sensitivity, [], Point(roi.ux, roi.uy), Point(roi.dx, roi.dy))
+            r = RegionOfInterest(roi.sensitivity, [], Point(roi.x1, roi.y1), Point(roi.x2, roi.y2))
             regions.append(r)
         self.config.regions_of_interest = regions
 

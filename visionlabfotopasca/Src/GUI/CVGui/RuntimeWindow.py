@@ -19,8 +19,6 @@ class RuntimeWindow(CVWindow):
 
     def prepareFrame(self):
         self.root = cv2.resize(self.root, (self.width, self.height))
-        self.root = cv2.cvtColor(self.root, cv2.COLOR_BGR2GRAY)
-        self.root = cv2.cvtColor(self.root, cv2.COLOR_GRAY2BGR)
 
     def drawUI(self):
         cv2.rectangle(self.root, (0, self.height - 80), (self.width, self.height), (50, 50, 50), -1)  # bar

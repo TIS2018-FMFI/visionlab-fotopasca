@@ -1,7 +1,6 @@
 from tkinter import *
 
 from Src.GUI import GUI
-from Src.Configuration.conf import Configuration
 
 
 class ConfigurationWindow:
