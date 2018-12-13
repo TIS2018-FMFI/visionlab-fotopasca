@@ -24,8 +24,6 @@ class RoiWindow(CVWindow):
         self.prepareFrame()
         self.drawUI()
         cv2.imshow('PhotoTrap', self.root)
-        if self.slider.value() == 100:
-            self.gui.alarm.play()
 
     def prepareFrame(self):
         self.root = cv2.resize(self.root, (self.width, self.height))
@@ -96,14 +94,14 @@ class RoiWindow(CVWindow):
             #print("Click: " + str(x) + "," + str(y))
             if roi.isInside(x, y):
                 self.sel = roi
+                self.slider.setValue(roi.sensitivity)
                 break
-        print(self.slider.value())
 
     def mouseMove(self, x, y):
         self.btnConfig.mouseHover(x, y)
         self.btnOn.mouseHover(x, y)
         self.btnDel.mouseHover(x, y)
-        self.slider.mouseMove(x, y)
+        self.slider.mouseMove(x, y, self.sel)
         if self.drawing:
             self.new.dx = x
             self.new.dy = y

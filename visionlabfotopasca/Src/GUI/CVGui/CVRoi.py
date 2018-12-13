@@ -3,13 +3,14 @@ import cv2
 
 class CVRoi:
 
-    def __init__(self, color=(0, 255, 0), width: int = 3):
+    def __init__(self, color=(0, 255, 0), width: int = 3, sensitivity: int = 50):
         self.ux: int = -1
         self.uy: int = -1
         self.dx: int = -1
         self.dy: int = -1
         self.color = color
         self.width: int = width
+        self.sensitivity = sensitivity
 
     def draw(self, root, sel=False):
         if self.isValid():

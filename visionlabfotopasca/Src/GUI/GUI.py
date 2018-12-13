@@ -1,5 +1,4 @@
 from Src.Configuration.conf import Configuration, RegionOfInterest, Point
-from Src.GUI.Alarm import Alarm
 from Src.GUI.CVGui.CVRoi import CVRoi
 from Src.GUI.TKGui.ConfigurationWindow import ConfigurationWindow
 from Src.GUI.CVGui.RuntimeWindow import RuntimeWindow
@@ -19,7 +18,6 @@ class GUI:
         self.window = None
         self.rois = list()
         self.loadRois()
-        self.alarm = Alarm()
 
     def configurationWindow(self):
         self.window = ConfigurationWindow(self)
@@ -38,12 +36,13 @@ class GUI:
             r.uy = roi.start.Y
             r.dx = roi.end.X
             r.dy = roi.end.Y
+            r.sensitivity = roi.sensitivity
             self.rois.append(r)
 
     def saveRois(self):
         regions = list()
         for roi in self.rois:
-            r = RegionOfInterest(0, [], Point(roi.ux, roi.uy), Point(roi.dx, roi.dy))
+            r = RegionOfInterest(roi.sensitivity, [], Point(roi.ux, roi.uy), Point(roi.dx, roi.dy))
             regions.append(r)
         self.config.regions_of_interest = regions
 

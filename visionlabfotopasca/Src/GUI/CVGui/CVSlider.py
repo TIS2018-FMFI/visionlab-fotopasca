@@ -28,7 +28,7 @@ class CVSlider:
             cv2.rectangle(root, (self.ux, self.uy), (self.dx, self.dy), (255, 255, 255), -1)
             cv2.rectangle(root, (self.ux, self.uy), (self.dx, self.dy), (0, 0, 0), 2)
 
-    def mouseMove(self, x: int, y: int):
+    def mouseMove(self, x: int, y: int, sel):
         if self.active:
             self.ux = x - 8
             self.dx = x + 8
@@ -38,11 +38,19 @@ class CVSlider:
             if self.dx > self.rx:
                 self.dx = self.rx
                 self.ux = self.dx - 16
+            sel.sensitivity = self.getValue()
 
     def mouseClick(self, x: int, y: int):
         return self.ux <= x <= self.dx and self.uy <= y <= self.dy
 
-    def value(self):
+    def setValue(self, val):
+        print(val)
+        length = self.rx - self.lx - 16
+        pos = int(length / 100 * val)
+        self.ux = self.lx + pos
+        self.dx = self.lx + 16 + pos
+
+    def getValue(self):
         length = self.rx - self.lx - 16
         pos = self.ux - self.lx
         return int((pos/length) * 100)
