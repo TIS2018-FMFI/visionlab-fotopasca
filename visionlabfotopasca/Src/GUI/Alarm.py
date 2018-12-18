@@ -20,3 +20,4 @@ class Alarm:
         if self.__play_obj is not None and self.__play_obj.is_playing():
             self.__play_obj.stop()
             self.__play_obj = None
+

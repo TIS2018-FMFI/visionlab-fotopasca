@@ -13,7 +13,7 @@ class Controller:
 
     def isMovement(self, frame):
         ## kluc je id oblasti hodnota je bool
-        res = dict()
+        res = [False]*len(self.config.regions_of_interest)
 
         # konvezria na gray scale img
         gray_img = gray_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
@@ -26,14 +26,15 @@ class Controller:
             # spravime rozdiel pixelov v obrazkoch
             diff = cv2.absdiff(self.lastFrame, gray_frame)
 
-            for roi in self.config.regions_of_interest:
+            for idx, roi in enumerate(self.config.regions_of_interest):
                 # vybereme oblast roi
                 rio_img = diff[roi.start.Y:roi.end.Y, roi.start.X:roi.end.X]
 
                 # TODO: odstranit z roi oblasti ktore tam nechceme
 
                 # spravime treshlold podla sensitivity
-                ret, thresh = cv2.threshold(rio_img,roi.sensitivity,255,cv2.THRESH_BINARY)
+                sensitivity = (101 - roi.sensitivity)*255
+                ret, thresh = cv2.threshold(rio_img, sensitivity, 255, cv2.THRESH_BINARY)
                 # percentualna zmena
                 count = np.sum(thresh)
                 count = int(count)
@@ -41,11 +42,11 @@ class Controller:
 
                 # print(percentage_change)
                 # aka zmena presiahla 30 percent nastala udalost co zaznacime
-                if percentage_change > 100 - roi.sensitivity:
-                    flag = True
+                if percentage_change > 20:
+                    res[idx] = True
 
         self.lastFrame = gray_frame
 
-        return flag
+        return res
 
 
