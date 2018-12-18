@@ -90,8 +90,8 @@ class RoiWindow(CVWindow):
     def leftMouseButtonDoubleClick(self, x, y):
         self.sel = None
         for roi in reversed(self.gui.rois):
-            print("Roi: (" + str(roi.x1) + "," + str(roi.y1) + "), (" + str(roi.x2) + "," + str(roi.y2) + ")")
-            print("Click: " + str(x) + "," + str(y))
+            #print("Roi: (" + str(roi.x1) + "," + str(roi.y1) + "), (" + str(roi.x2) + "," + str(roi.y2) + ")")
+            #print("Click: " + str(x) + "," + str(y))
             if roi.isInside(x, y):
                 self.sel = roi
                 self.slider.setValue(roi.sensitivity)
