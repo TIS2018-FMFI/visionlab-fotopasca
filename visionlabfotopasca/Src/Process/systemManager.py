@@ -5,6 +5,7 @@ from Src.Configuration.conf import Configuration, load, save
 from Src.GUI.Alarm import Alarm
 from Src.GUI.GUI import GUI
 from Src.Process.controller import Controller
+from Src.Process.eventHandler import EventHandler
 from Src.Saver.logger import Logger
 from Src.Saver.recorder import Recorder
 
@@ -20,7 +21,8 @@ class SystemManager:
         self.recorder: Recorder = Recorder(self.config)
         self.controller: Controller = Controller(self.config)
         self.gui: GUI = GUI(self, self.config)
-        self.alarm = Alarm()
+        self.eventHandler : EventHandler = EventHandler(self.config, self.logger)
+
 
     def start(self):
         if self.config.system.skip:
@@ -65,17 +67,13 @@ class SystemManager:
         while self.gui.STATE == self.gui.RUNTIME_STATE:
             ret, frame = self.cap.read()
             self.gui.window.loop(frame)
-            move = self.controller.isMovement(frame)
-            if move:
-                self.alarm.play()
+            movements = self.controller.isMovement(frame)
+
+            self.eventHandler.process(frame, movements)
 
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 self.gui.STATE = self.gui.TERMINATE_STATE
 
-    def sendFrame(self, frame):
-        '''posli recorderovi a controlerovi'''
-        self.recorder.append(frame)
-        movements = self.controller.isMovement(frame)
-        ## for id, isMovement in movements:
+
 
 SystemManager().start()
