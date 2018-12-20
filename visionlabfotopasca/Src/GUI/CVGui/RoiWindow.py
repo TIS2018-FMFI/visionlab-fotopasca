@@ -21,12 +21,8 @@ class RoiWindow(CVWindow):
 
     def loop(self, frame):
         self.root = frame
-        self.prepareFrame()
         self.drawUI()
         cv2.imshow('PhotoTrap', self.root)
-
-    def prepareFrame(self):
-        self.root = cv2.resize(self.root, (self.width, self.height))
 
     def drawUI(self):
         cv2.rectangle(self.root, (0, self.height - 80), (self.width, self.height), (50, 50, 50), -1)

@@ -13,12 +13,8 @@ class RuntimeWindow(CVWindow):
 
     def loop(self, frame):
         self.root = frame
-        self.prepareFrame()
         self.drawUI()
         cv2.imshow('PhotoTrap', self.root)
-
-    def prepareFrame(self):
-        self.root = cv2.resize(self.root, (self.width, self.height))
 
     def drawUI(self):
         cv2.rectangle(self.root, (0, self.height - 80), (self.width, self.height), (50, 50, 50), -1)  # bar
@@ -41,7 +37,7 @@ class RuntimeWindow(CVWindow):
         if self.btnOff.mouseClick(x, y):
             self.gui.STATE = self.gui.ROI_STATE
         if self.btnRecord.mouseClick(x, y):
-            pass
+            self.gui.manager.recorder.toggle()
 
     def mouseMove(self, x, y):
         self.btnOff.mouseHover(x, y)

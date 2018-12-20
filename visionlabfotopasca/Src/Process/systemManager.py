@@ -14,6 +14,8 @@ class SystemManager:
     CV_CAP_PROP_FRAME_WIDTH = 3
     CV_CAP_PROP_FRAME_HEIGHT = 4
     CV_CAP_PROP_FPS = 5
+    INTERNAL_CAMERA = 0
+    EXTERNAL_CAMERA = 1
 
     def __init__(self):
         self.config: Configuration = load()
@@ -21,7 +23,7 @@ class SystemManager:
         self.recorder: Recorder = Recorder(self.config)
         self.controller: Controller = Controller(self.config)
         self.gui: GUI = GUI(self, self.config)
-        self.eventHandler : EventHandler = EventHandler(self.config, self.logger)
+        self.eventHandler: EventHandler = EventHandler(self.config, self.logger)
 
 
     def start(self):
@@ -34,13 +36,13 @@ class SystemManager:
                 self.gui.configurationWindow()
                 save(self.config)
             elif self.gui.STATE == self.gui.ROI_STATE:
-                self.cap = cv2.VideoCapture(0)
+                self.cap = cv2.VideoCapture(self.INTERNAL_CAMERA)
                 self.setCamera()
                 self.roiMenu()
                 self.gui.saveRois()
                 save(self.config)
             elif self.gui.STATE == self.gui.RUNTIME_STATE:
-                self.cap = cv2.VideoCapture(0)
+                self.cap = cv2.VideoCapture(self.INTERNAL_CAMERA)
                 self.runtimeMenu()
 
         self.cap.release()
@@ -54,22 +56,26 @@ class SystemManager:
 
     def roiMenu(self):
         self.gui.roiWindow()
-
+        width, height = self.config.system.resolution
         while self.gui.STATE == self.gui.ROI_STATE:
             ret, frame = self.cap.read()
+            frame = cv2.resize(frame, (width, height))
             self.gui.window.loop(frame)
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 self.gui.STATE = self.gui.TERMINATE_STATE
 
     def runtimeMenu(self):
         self.gui.runtimeWindow()
-
+        width, height = self.config.system.resolution
+        self.eventHandler.clear()
         while self.gui.STATE == self.gui.RUNTIME_STATE:
             ret, frame = self.cap.read()
-            self.gui.window.loop(frame)
-            movements = self.controller.isMovement(frame)
+            frame = cv2.resize(frame, (width, height))
 
+            movements = self.controller.isMovement(frame)
             self.eventHandler.process(frame, movements)
+            self.recorder.append(frame)
+            self.gui.window.loop(frame)
 
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 self.gui.STATE = self.gui.TERMINATE_STATE

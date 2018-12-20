@@ -11,9 +11,6 @@ class CVWindow:
     def loop(self, frame):
         return "Not Implemented!"
 
-    def prepareFrame(self):
-        return "Not Implemented!"
-
     def drawUI(self):
         return "Not Implemented!"
 

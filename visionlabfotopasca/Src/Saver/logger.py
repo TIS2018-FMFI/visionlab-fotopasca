@@ -8,8 +8,8 @@ from Src.Configuration import conf
 
 class Logger:
 
-    LOGFILE = "..\events\log\log.txt"
-    PATH_TO_PICTURE_FILE = "..\events\images\\"
+    LOGFILE = "../../events/log/log.txt"
+    PATH_TO_PICTURE_FILE = "../../events/images/"
     
     def log(self,event : Event):
         with open(self.LOGFILE,'a') as f:
@@ -19,7 +19,7 @@ class Logger:
                   str(event.time).replace(':','-') +\
                   "#" + str(event.pictureNumber) +  ".jpg"
         
-        
+        print("logujem")
         cv2.imwrite(imgName,event.image)
 
         

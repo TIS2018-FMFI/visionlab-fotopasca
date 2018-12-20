@@ -1,0 +1,8 @@
+"2018-12-20 12:16:01.936417";0.13271689414978027;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=290, Y=133), end=Point(X=599, Y=402))";0
+"2018-12-20 12:16:02.133632";0.16907501220703125;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=290, Y=133), end=Point(X=599, Y=402))";1
+"2018-12-20 12:16:03.034490";0.13445782661437988;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=290, Y=133), end=Point(X=599, Y=402))";2
+"2018-12-20 12:16:03.371906";0.13464903831481934;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=290, Y=133), end=Point(X=599, Y=402))";3
+"2018-12-20 12:16:04.202792";0.16713595390319824;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=290, Y=133), end=Point(X=599, Y=402))";4
+"2018-12-20 12:16:04.536903";0.43236374855041504;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=290, Y=133), end=Point(X=599, Y=402))";5
+"2018-12-20 12:16:05.037740";0.06502199172973633;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=290, Y=133), end=Point(X=599, Y=402))";6
+"2018-12-20 12:16:05.171412";0.06619906425476074;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=290, Y=133), end=Point(X=599, Y=402))";7

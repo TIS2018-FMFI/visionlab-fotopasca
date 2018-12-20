@@ -106,7 +106,7 @@ class ConfigurationWindow:
         delayFrame = Frame(self.root, bg="lightgray")
         delayLabel = Label(delayFrame, text="oneskorenie\nalarmu(s):", bg="lightgray",  width=10)
         delayLabel.pack(side=LEFT)
-        self.delay = Scale(delayFrame, from_=1, to=30, orient=HORIZONTAL)
+        self.delay = Scale(delayFrame, from_=0, to=30, orient=HORIZONTAL)
         self.delay.set(self.gui.config.alarm.delay)
         self.delay.config(bg="lightgray")
         self.delay.pack(side=LEFT)
