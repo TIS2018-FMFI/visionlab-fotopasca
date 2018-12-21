@@ -5,6 +5,7 @@ from time import time
 from datetime import datetime as datetime
 
 from Src.Saver.logger import Logger
+from Src.Saver.recorder import EmergencyRecorder
 
 
 class EventHandler:
@@ -13,6 +14,7 @@ class EventHandler:
         self.config: Configuration = config
         self.alarm: Alarm = Alarm()
         self.logger: Logger = logger
+        self.recording = list()
         self.events = list()
         self.count = 0
 
@@ -21,30 +23,58 @@ class EventHandler:
 
     def process(self, frame, movements):
 
-
-        #if not self.config.alarm.enabled:
-        #    return
-
         now = time()
         delay = self.config.alarm.delay
 
         for idx in range(len(movements)):
+            if self.hasEventStarted(movements,idx):
+                self.processStartOfEvent(frame, idx, now)
 
-            if movements[idx] is True and self.events[idx][0] == -1:
-                event = Event(datetime.now(), float(0), self.config.regions_of_interest[idx], self.count, frame)
-                self.events[idx] = (now, -1, event)
-                self.count += 1
+            elif self.hasEventEnded(movements, idx):
+                self.processEndOfEvent(idx, now)
 
-            elif movements[idx] is False and self.events[idx][0] != -1:
-                event = self.events[idx][2]
-                event.duration = (now - self.events[idx][0])
-                self.logger.log(event)
-                self.events[idx] = (-1, -1, None)
+        self.alarmSignalization(delay, now, frame)
 
-        for t in self.events:
-            if t[0] != -1:
-                diff = now - t[0]
-                #print(diff)
+    def hasEventStarted(self, movements, idx):
+        return movements[idx] is True and self.events[idx][0] == -1
+
+    def hasEventEnded(self, movements, idx):
+        return movements[idx] is False and self.events[idx][0] != -1
+
+    def processEndOfEvent(self, idx, now):
+        event = self.events[idx][2]
+        event.duration = (now - self.events[idx][0])
+        self.logger.log(event)
+        rec: EmergencyRecorder = self.events[idx][2]
+
+        if rec is not None:
+            rec.save()
+
+        self.events[idx] = (-1, -1, None)
+
+    def processStartOfEvent(self, frame, idx, now):
+        roi = self.config.regions_of_interest[idx]
+        roiFrame = frame[roi.start.Y:roi.end.Y, roi.start.X:roi.end.X]
+        event = Event(datetime.now(), float(0), roi, self.count, roiFrame)
+        rec: EmergencyRecorder = None
+        if self.config.video.enabled:
+            rec = EmergencyRecorder(self.config, roi)
+
+        self.events[idx] = (now, -1, rec)
+        self.count += 1
+
+    def alarmSignalization(self, delay, now, frame):
+
+        for e in self.events:
+            start, end, rec = e
+
+            if rec is not None:
+                rec.append(frame)
+
+            if not self.config.alarm.enabled:
+                continue
+            if start != -1:
+                diff = now - start
                 if diff >= delay:
                     self.alarm.play()
 
