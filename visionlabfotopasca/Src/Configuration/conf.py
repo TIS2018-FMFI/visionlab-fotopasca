@@ -1,3 +1,4 @@
+import os
 from dataclasses import dataclass
 from typing import List, Tuple
 import pickle
@@ -55,7 +56,8 @@ class Configuration:
         self.alarm: AlarmSettings = AlarmSettings(True, 5, 10)
         self.regions_of_interest: List[RegionOfInterest] = [RegionOfInterest(0,[])]
 
-CONF_FILE = "../../res/conf.obj"
+
+CONF_FILE = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.realpath(__file__)))), "res/conf.obj")
 
 def save(c: Configuration):
     with open(CONF_FILE, "wb") as output:
@@ -69,8 +71,6 @@ def load() -> Configuration:
     return conf
 
 
-
-
 # demonstration of saving configration
 if __name__ == "__main__":
     conf = Configuration()
@@ -80,13 +80,3 @@ if __name__ == "__main__":
     conf2 = load()
 
     print(conf2.email)
-        
-    
-
-
-
-
-
-
-
-    

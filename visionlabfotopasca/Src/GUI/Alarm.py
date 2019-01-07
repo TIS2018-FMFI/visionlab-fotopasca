@@ -1,9 +1,10 @@
-
+import os
 import simpleaudio as sa
 
 
 class Alarm:
     SOUND_FILE = "../../res/alarm.wav"
+    SOUND_FILE = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.realpath(__file__)))), "res/alarm.wav")
 
     def __init__(self):
         self.__wave_obj = sa.WaveObject.from_wave_file(self.SOUND_FILE)
