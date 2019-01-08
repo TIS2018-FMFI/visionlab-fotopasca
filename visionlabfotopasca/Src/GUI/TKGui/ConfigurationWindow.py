@@ -4,33 +4,37 @@ from Src.GUI import GUI
 
 
 class ConfigurationWindow:
+    """
+    Class for tkinter based GUI of the configuration window.
+    """
 
     def __init__(self, gui: GUI):
+        """
+        Configuration window constructor.
+        :param gui: reference to the parent gui manager
+        """
         self.gui: GUI = gui
         self.root = Tk()
         self.root.title("Config")
         self.root.resizable(0, 0)
         self.root.config(bg="lightgray")
-        self.setupOptions()
+        self.__setupOptions()
         self.root.mainloop()
 
-    def destroy(self):
-        self.root.destroy()
-
-    def setupOptions(self):
+    def __setupOptions(self):
         col1 = Frame(self.root, width=200, bg="lightgray")
         col1.grid(row=0, column=0, sticky=E+W)
         col2 = Frame(self.root, width=200, bg="lightgray")
         col2.grid(row=0, column=1, sticky=E+W)
         col3 = Frame(self.root, width=200, bg="lightgray")
         col3.grid(row=0, column=2, sticky=E+W)
-        self.cameraOptions()
-        self.modeOptions()
-        self.alarmOptions()
-        self.otherOptions()
-        self.buttons()
+        self.__cameraOptions()
+        self.__modeOptions()
+        self.__alarmOptions()
+        self.__otherOptions()
+        self.__buttons()
 
-    def cameraOptions(self):
+    def __cameraOptions(self):
         label = Label(self.root, text="NASTAVENIA KAMERY", bg="lightgray", pady=20)
         label.grid(row=1, columnspan=3)
 
@@ -56,7 +60,7 @@ class ConfigurationWindow:
         div = Frame(self.root, heigh=3, bg="gray")
         div.grid(row=3, columnspan=3, sticky=E+W)
 
-    def modeOptions(self):
+    def __modeOptions(self):
         label = Label(self.root, text="NASTAVENIA REŽIMU", bg="lightgray", pady=20)
         label.grid(row=4, columnspan=3)
 
@@ -90,7 +94,7 @@ class ConfigurationWindow:
         div = Frame(self.root, heigh=3, bg="gray")
         div.grid(row=6, columnspan=3, sticky=E+W)
 
-    def alarmOptions(self):
+    def __alarmOptions(self):
         label = Label(self.root, text="NASTAVENIA ALARMU", bg="lightgray", pady=20)
         label.grid(row=7, columnspan=3)
 
@@ -124,7 +128,7 @@ class ConfigurationWindow:
         div = Frame(self.root, heigh=3, bg="gray")
         div.grid(row=9, columnspan=3, sticky=E+W)
 
-    def otherOptions(self):
+    def __otherOptions(self):
         label = Label(self.root, text="OSTATNÉ NASTAVENIA", bg="lightgray", pady=20)
         label.grid(row=10, columnspan=3)
 
@@ -156,7 +160,7 @@ class ConfigurationWindow:
         div = Frame(self.root, heigh=3, bg="gray")
         div.grid(row=12, columnspan=3, sticky=E+W)
 
-    def save(self):
+    def __save(self):
         self.gui.config.system.resolution = tuple(map(int, self.resVar.get().split("x")))
         self.gui.config.system.fps = self.framerate.get()
         self.gui.config.timelapse.enabled = bool(self.timelapseVar.get())
@@ -168,18 +172,9 @@ class ConfigurationWindow:
         self.gui.config.system.skip = bool(self.autoVar.get())
         self.gui.config.system.initDelay = self.startDelay.get()
         self.gui.STATE = self.gui.ROI_STATE
-        self.destroy()
+        self.root.destroy()
 
-    def buttons(self):
-        self.save = Button(self.root, text="ulož nastavenia", height=2, width=20, command=self.save)
-        self.save.grid(row=13, columnspan=3, padx=10, pady=(20, 8))
-        def zobraz():
-            print("----------NASTAVENIA----------")
-            print("rozlíšenie: " + str(self.resVar.get()))
-            print("snímkovanie: " + str(self.framerate.get()))
-            print("časozber: " + str(self.timelapseVar.get()))
-            print("alarm: " + str(self.alarmVar.get()))
-            print("------------------------------")
-        self.show = Button(self.root, text="zobraz nastavenia", height=2, width=20, command=zobraz)
-        self.show.grid(row=14, columnspan=3, padx=10, pady=(8, 20))
+    def __buttons(self):
+        self.save = Button(self.root, text="ulož nastavenia", height=2, width=20, command=self.__save)
+        self.save.grid(row=13, columnspan=3, padx=10, pady=20)
 

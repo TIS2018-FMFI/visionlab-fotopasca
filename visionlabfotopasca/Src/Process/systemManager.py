@@ -23,7 +23,6 @@ class SystemManager:
         self.gui: GUI = GUI(self, self.config)
         self.eventHandler: EventHandler = EventHandler(self.config, self.logger)
 
-
     def start(self):
         if self.config.system.skip:
             self.gui.STATE = self.gui.ROI_STATE

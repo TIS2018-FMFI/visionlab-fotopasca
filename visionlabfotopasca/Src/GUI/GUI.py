@@ -6,14 +6,7 @@ from Src.GUI.CVGui.RoiWindow import RoiWindow
 
 
 class GUI:
-    """
-    Class for managing the GUI
-
-    @type manager: SystemManager
-    @param manager: Instance of the main system manager
-    @type config: Configuration
-    @param config: A reference to an instance with current configuration
-    """
+    """ Class for managing the GUI """
     STATE = 0
     CONFIG_STATE = 0
     ROI_STATE = 1
@@ -21,6 +14,11 @@ class GUI:
     TERMINATE_STATE = -1
 
     def __init__(self, manager, config: Configuration):
+        """
+        GUI class constructor.
+        :param manager: reference to the main SystemManager instance
+        :param config: contains system configuration
+        """
         self.manager = manager
         self.config: Configuration = config
         self.window = None
