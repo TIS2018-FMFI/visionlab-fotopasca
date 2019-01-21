@@ -20,20 +20,9 @@ class RuntimeWindow(CVWindow):
         self.btnOff = CVButton(self.width - 150, self.height - 60, self.width - 20, self.height - 20, 'OFF', 42)
         self.__mouseEvent()
 
-    def loop(self, frame):
-        """
-        SystemManager should call this every frame to redraw the GUI.
-
-        :param frame: cv2 frame (ie. an image/frame of video) containing this window
-        """
-        self.root = frame
-        self.__drawUI()
-        cv2.imshow('PhotoTrap', self.root)
-
-    def __drawUI(self):
+    def drawUI(self):
         """ Internal method called by loop() drawing the GUI of this window. """
-        cv2.rectangle(self.root, (0, self.height - 80), (self.width, self.height), (50, 50, 50), -1)  # bar
-        cv2.putText(self.root, 'Q pre zavretie...', (20, self.height - 25), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1, cv2.LINE_AA)
+        super().drawUI()
         self.btnOff.draw(self.root)
         self.btnRecord.draw(self.root)
         for roi in self.gui.rois:

@@ -14,14 +14,11 @@ class CVWindow:
 
         :param frame: cv2 frame (ie. an image/frame of video) containing this window
         """
-        return "Not Implemented!"
+        self.root = frame
+        self.drawUI()
+        cv2.imshow('PhotoTrap', self.root)
 
-    def __drawUI(self):
+    def drawUI(self):
         """Internal method called by loop() drawing the GUI of this window."""
-        return "Not Implemented!"
-
-    def __mouseEvent(self):
-        """Called by constructor to set-up mouse callbacks."""
-        def event(e, x, y, flags, param):
-            pass
-        cv2.setMouseCallback('PhotoTrap', event)
+        cv2.rectangle(self.root, (0, self.height - 80), (self.width, self.height), (50, 50, 50), -1)  # bar
+        cv2.putText(self.root, 'Q pre zavretie...', (20, self.height - 25), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1, cv2.LINE_AA)
