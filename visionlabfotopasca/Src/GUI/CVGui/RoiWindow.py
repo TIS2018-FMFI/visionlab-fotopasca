@@ -33,7 +33,7 @@ class RoiWindow(CVWindow):
         super().drawUI()
         if self.sel is not None:
             self.btnDel.draw(self.root)
-            info = "x1:" + str(self.sel.x1) + " y1:" + str(self.sel.y1) + " x2:" + str(self.sel.x2) + " y2:" + str(self.sel.y2)
+            info = "x1: " + str(self.sel.x1) + " y1: " + str(self.sel.y1) + " x2: " + str(self.sel.x2) + " y2: " + str(self.sel.y2)
             cv2.putText(self.root, info, (20, self.height - 45), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1, cv2.LINE_AA)
         self.new.draw(self.root)
         for roi in self.gui.rois:

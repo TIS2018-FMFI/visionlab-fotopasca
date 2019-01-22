@@ -50,10 +50,10 @@ class SystemManager:
         cv2.destroyAllWindows()
 
     def setCamera(self):
-        self.cap = cv2.VideoCapture(self.INTERNAL_CAMERA)
-        #self.cap = cv2.VideoCapture(self.PATH_TO_VIDEO)
-        self.cap.set(self.CV_CAP_PROP_FPS, self.config.system.fps)
+        #self.cap = cv2.VideoCapture(self.INTERNAL_CAMERA)
+        self.cap = cv2.VideoCapture(self.PATH_TO_VIDEO)
         width, height = self.config.system.resolution
+        self.cap.set(self.CV_CAP_PROP_FPS, self.config.system.fps)
         self.cap.set(self.CV_CAP_PROP_FRAME_WIDTH, width)
         self.cap.set(self.CV_CAP_PROP_FRAME_HEIGHT, height)
 
@@ -62,12 +62,14 @@ class SystemManager:
         width, height = self.config.system.resolution
         while self.gui.STATE == self.gui.ROI_STATE:
             ret, frame = self.cap.read()
-            if cv2.waitKey(1) & 0xFF == ord('q') or ret is False:
+            if ret is False:
+                self.setCamera()
+                ret, frame = self.cap.read()
+            frame = cv2.resize(frame, (width, height))
+            self.gui.window.loop(frame)
+
+            if cv2.waitKey(1) & 0xFF == ord('q'):
                 self.gui.STATE = self.gui.TERMINATE_STATE
-                return
-            else:
-                frame = cv2.resize(frame, (width, height))
-                self.gui.window.loop(frame)
 
     def runtimeMenu(self):
         self.gui.runtimeWindow()
@@ -75,16 +77,20 @@ class SystemManager:
         self.eventHandler.clear()
         while self.gui.STATE == self.gui.RUNTIME_STATE:
             ret, frame = self.cap.read()
-            if cv2.waitKey(1) & 0xFF == ord('q') or ret is False:
-                self.gui.STATE = self.gui.TERMINATE_STATE
-            else:
-                frame = cv2.resize(frame, (width, height))
-                if self.startTime is None:
-                    self.startTime = time()
-                if time() - self.startTime > self.config.system.initDelay:
-                    movements = self.controller.isMovement(frame)
-                    self.eventHandler.process(frame, movements)
+            if ret is False:
+                self.setCamera()
+                ret, frame = self.cap.read()
+            frame = cv2.resize(frame, (width, height))
 
-                self.recorder.append(frame)
-                self.gui.window.loop(frame)
+            if self.startTime is None:
+                self.startTime = time()
+            if time() - self.startTime > self.config.system.initDelay:
+                movements = self.controller.isMovement(frame)
+                self.eventHandler.process(frame, movements)
+
+            self.recorder.append(frame)
+            self.gui.window.loop(frame)
+
+            if cv2.waitKey(1) & 0xFF == ord('q'):
+                self.gui.STATE = self.gui.TERMINATE_STATE
 

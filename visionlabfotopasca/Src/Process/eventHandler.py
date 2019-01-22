@@ -50,7 +50,6 @@ class EventHandler:
             rec.save()
 
         print("stop")
-
         self.events[idx] = (-1, -1, None, None)
 
     def processStartOfEvent(self, frame, idx, now):

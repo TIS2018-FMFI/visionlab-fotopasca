@@ -42,16 +42,17 @@ class SystemSettings:
     resolution: Tuple[int, int]
     videoFolder: str
     fps: int
+    cut: bool
 
 
 #@dataclass
 class Configuration:
 
     def __init__(self):
-        self.system: SystemSettings = SystemSettings(False, "pass", 10, (1280, 720), "video", 40)
+        self.system: SystemSettings = SystemSettings(False, "", 10, (1280, 720), "video", 40, False)
         self.timelapse: TimelapseSettings = TimelapseSettings(True, 30)
         self.video: VideoSettings = VideoSettings(True)
-        self.email: EmailSettings = EmailSettings(False, None)
+        self.email: EmailSettings = EmailSettings(False, "")
         self.alarm: AlarmSettings = AlarmSettings(True, 5, 10)
         self.regions_of_interest: List[RegionOfInterest] = []
         self.ignored_areas: List[RegionOfInterest] = []
@@ -59,23 +60,22 @@ class Configuration:
 
 CONF_FILE = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.realpath(__file__)))), "res/conf.obj")
 
+
 def save(c: Configuration):
     with open(CONF_FILE, "wb") as output:
         pickle.dump(c, output, pickle.HIGHEST_PROTOCOL)
+
 
 def load() -> Configuration:
     conf = None
     with open(CONF_FILE, "rb") as file:
         conf = pickle.load(file)
-
     return conf
 
 
-# demonstration of saving configration
+# demonstration of saving configuration
 if __name__ == "__main__":
-    conf = Configuration()
-
-    save(conf)
+    conf1 = Configuration()
+    save(conf1)
     conf2 = load()
 
-    print(conf2.email)

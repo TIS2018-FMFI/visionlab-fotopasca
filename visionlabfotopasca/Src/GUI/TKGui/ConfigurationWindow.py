@@ -4,8 +4,10 @@ from Src.GUI import GUI
 
 
 class ConfigurationWindow:
+    AVAILABLE_RESOLUTIONS = ["1920x1080", "1600x900", "1366x768", "1280x720", "960x540"]
     """
     Class for tkinter based GUI of the configuration window.
+    :param AVAILABLE_RESOLUTIONS : List of resolutions in format "WIDTHxHEIGHT" that will be available.
     """
 
     def __init__(self, gui: GUI):
@@ -37,18 +39,27 @@ class ConfigurationWindow:
         resLabel.pack(side=LEFT)
         self.resVar = StringVar(self.root)
         self.resVar.set(str(self.gui.config.system.resolution[0]) + "x" + str(self.gui.config.system.resolution[1]))
-        self.resolution = OptionMenu(resFrame, self.resVar, "1280x720", "960x540")
+        self.resolution = OptionMenu(resFrame, self.resVar, *self.AVAILABLE_RESOLUTIONS)
         self.resolution.config(bg="lightgray")
         self.resolution.pack(side=LEFT)
         resFrame.grid(row=1, column=0, padx=10, pady=(0,20))
 
         rateFrame = Frame(self.root, bg="lightgray")
-        rateLabel = Label(rateFrame, text="snímkovanie:", bg="lightgray", width=10)
+        rateLabel = Label(rateFrame, text="snímkovanie\n(fps):", bg="lightgray", width=10)
         rateLabel.pack(side=LEFT)
         self.framerate = Scale(rateFrame, from_=10, to=60, orient=HORIZONTAL, resolution=10, bg="lightgray")
         self.framerate.set(self.gui.config.system.fps)
         self.framerate.pack(side=LEFT)
         rateFrame.grid(row=1, column=1, padx=10, pady=(0,20))
+
+        cutFrame = Frame(self.root, bg="lightgray")
+        cutLabel = Label(cutFrame, text="záznam\nvýseku:", bg="lightgray", width=10)
+        cutLabel.pack(side=LEFT)
+        self.cutVar = IntVar()
+        self.cutVar.set(self.gui.config.system.cut)
+        self.cut = Checkbutton(cutFrame, variable=self.cutVar, bg="lightgray")
+        self.cut.pack(side=LEFT)
+        cutFrame.grid(row=1, column=2, padx=10, pady=(0,20))
 
         div = Frame(self.root, heigh=3, bg="gray")
         div.grid(row=2, columnspan=3, sticky=E+W)
@@ -67,7 +78,7 @@ class ConfigurationWindow:
         lapseFrame.grid(row=4, column=0, padx=10, pady=(0,20))
 
         freqFrame = Frame(self.root, bg="lightgray")
-        freqLabel = Label(freqFrame, text="frekvencia\nčasozberu:", bg="lightgray",  width=10)
+        freqLabel = Label(freqFrame, text="frekvencia\nčasozberu(s):", bg="lightgray",  width=10)
         freqLabel.pack(side=LEFT)
         self.frequency = Scale(freqFrame, from_=1, to=30, orient=HORIZONTAL, resolution=1)
         self.frequency.set(self.gui.config.timelapse.capture_speed)
@@ -164,6 +175,7 @@ class ConfigurationWindow:
         self.gui.config.alarm.duration = self.post.get()
         self.gui.config.system.skip = bool(self.autoVar.get())
         self.gui.config.system.initDelay = self.startDelay.get()
+        self.gui.config.system.cut = bool(self.cutVar.get())
         self.gui.STATE = self.gui.ROI_STATE
         self.root.destroy()
 
