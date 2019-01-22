@@ -9,12 +9,16 @@ class CVWindow:
         self.root = None
 
     def loop(self, frame):
-        return "Not Implemented!"
+        """
+        SystemManager should call this every frame to redraw the GUI.
+
+        :param frame: cv2 frame (ie. an image/frame of video) containing this window
+        """
+        self.root = frame
+        self.drawUI()
+        cv2.imshow('PhotoTrap', self.root)
 
     def drawUI(self):
-        return "Not Implemented!"
-
-    def mouseEvent(self):
-        def event(e, x, y, flags, param):
-            pass
-        cv2.setMouseCallback('PhotoTrap', event)
+        """Internal method called by loop() drawing the GUI of this window."""
+        cv2.rectangle(self.root, (0, self.height - 80), (self.width, self.height), (50, 50, 50), -1)  # bar
+        cv2.putText(self.root, 'Q pre zavretie...', (20, self.height - 25), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1, cv2.LINE_AA)

@@ -1,8 +1,6 @@
 import cv2
-from typing import List
 
 from Src.Configuration.conf import Configuration, load, save
-from Src.GUI.Alarm import Alarm
 from Src.GUI.GUI import GUI
 from Src.Process.controller import Controller
 from Src.Process.eventHandler import EventHandler
@@ -25,7 +23,6 @@ class SystemManager:
         self.gui: GUI = GUI(self, self.config)
         self.eventHandler: EventHandler = EventHandler(self.config, self.logger)
 
-
     def start(self):
         if self.config.system.skip:
             self.gui.STATE = self.gui.ROI_STATE
@@ -43,6 +40,7 @@ class SystemManager:
                 save(self.config)
             elif self.gui.STATE == self.gui.RUNTIME_STATE:
                 self.cap = cv2.VideoCapture(self.INTERNAL_CAMERA)
+                self.setCamera()
                 self.runtimeMenu()
 
         self.cap.release()
@@ -80,6 +78,3 @@ class SystemManager:
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 self.gui.STATE = self.gui.TERMINATE_STATE
 
-
-
-SystemManager().start()
