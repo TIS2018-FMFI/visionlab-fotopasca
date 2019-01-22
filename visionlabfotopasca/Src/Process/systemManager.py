@@ -50,8 +50,8 @@ class SystemManager:
         cv2.destroyAllWindows()
 
     def setCamera(self):
-        #self.cap = cv2.VideoCapture(self.INTERNAL_CAMERA)
-        self.cap = cv2.VideoCapture(self.PATH_TO_VIDEO)
+        self.cap = cv2.VideoCapture(self.INTERNAL_CAMERA)
+        #self.cap = cv2.VideoCapture(self.PATH_TO_VIDEO)
         width, height = self.config.system.resolution
         self.cap.set(self.CV_CAP_PROP_FPS, self.config.system.fps)
         self.cap.set(self.CV_CAP_PROP_FRAME_WIDTH, width)

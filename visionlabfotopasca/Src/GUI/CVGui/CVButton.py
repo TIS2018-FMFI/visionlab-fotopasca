@@ -24,7 +24,7 @@ class CVButton:
         self.pLeft: int = pleft
         self.pTop: int = int((dy - uy) * 0.675)
 
-    def draw(self, root):
+    def draw(self, root, bg=(255, 255, 255)):
         """
         Re-draw function of the button. Call this every frame to update the hover look of the button.
 
@@ -36,7 +36,7 @@ class CVButton:
             cv2.putText(root, self.text, (self.ux + self.pLeft, self.uy + self.pTop), cv2.FONT_HERSHEY_SIMPLEX, 0.8,
                         (255, 255, 255), 1, cv2.LINE_AA)
         else:
-            cv2.rectangle(root, (self.ux, self.uy), (self.dx, self.dy), (255, 255, 255), -1)
+            cv2.rectangle(root, (self.ux, self.uy), (self.dx, self.dy), bg, -1)
             cv2.rectangle(root, (self.ux, self.uy), (self.dx, self.dy), (0, 0, 0), 2)
             cv2.putText(root, self.text, (self.ux + self.pLeft, self.uy + self.pTop), cv2.FONT_HERSHEY_SIMPLEX, 0.8,
                         (0, 0, 0), 1, cv2.LINE_AA)

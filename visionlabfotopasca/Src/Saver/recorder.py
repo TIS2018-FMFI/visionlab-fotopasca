@@ -8,9 +8,10 @@ from Src.Process.event import Event
 
 
 class Recorder:
+    VIDEO_PATH = path.join(path.dirname(path.dirname(path.dirname(path.realpath(__file__)))), "videos/")
+    TIMELAPSE_PATH = path.join(path.dirname(path.dirname(path.dirname(path.realpath(__file__)))), "timelapse/")
+
     def __init__(self, config):
-        self.VIDEO_PATH = path.join(path.dirname(path.dirname(path.dirname(path.realpath(__file__)))), "videos/")
-        self.TIMELAPSE_PATH = path.join(path.dirname(path.dirname(path.dirname(path.realpath(__file__)))), "timelapse/")
         self.config = config
         self.recording = False
 
@@ -54,24 +55,26 @@ class Recorder:
         if self.timelapse:
             self.outTimelapse.release()
 
+
 count = 0
+
 
 class EmergencyRecorder:
     SAVE_PATH = path.join(path.dirname(path.dirname(path.dirname(path.realpath(__file__)))), "events/videos/")
-    fourcc = cv2.VideoWriter_fourcc(*"XVID")
 
     def __init__(self,config: Configuration, event: Event):
         self.roi: RegionOfInterest = event.roi
         self.event = event
         filePath = self.getPathToVideo()
         self.resolution = self.getResolution()
-        self.out = cv2.VideoWriter(filePath, self.fourcc, config.system.fps, self.resolution)
+        fourcc = cv2.VideoWriter_fourcc(*"XVID")
+        self.out = cv2.VideoWriter(filePath, fourcc, config.system.fps, self.resolution)
         self.recording = True
 
     def getResolution(self):
         width = self.roi.end.X - self.roi.start.X
         height = self.roi.end.Y - self.roi.start.Y
-        return (width, height)
+        return width, height
 
     def getPathToVideo(self):
         global count

@@ -23,8 +23,18 @@ class RuntimeWindow(CVWindow):
     def drawUI(self):
         """ Internal method called by loop() drawing the GUI of this window. """
         super().drawUI()
+
+        timelapse = "on" if self.gui.manager.recorder.timelapse else "off"
+        video = "on" if self.gui.manager.recorder.recording else "off"
+        info = "timelapse: " + timelapse + " video: " + video
+        cv2.putText(self.root, info, (self.width - 605, self.height - 25), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1, cv2.LINE_AA)
+
         self.btnOff.draw(self.root)
-        self.btnRecord.draw(self.root)
+        if video == "on":
+            self.btnRecord.draw(self.root, (0, 0, 255))
+        else:
+            self.btnRecord.draw(self.root)
+
         for roi in self.gui.rois:
             roi.draw(self.root)
 
