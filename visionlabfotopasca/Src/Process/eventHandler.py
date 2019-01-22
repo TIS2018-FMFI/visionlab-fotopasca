@@ -19,7 +19,7 @@ class EventHandler:
         self.count = 0
 
     def clear(self):
-        self.events = [(-1, -1, None) for i in range(len(self.config.regions_of_interest))]
+        self.events = [(-1, -1, None, None) for i in range(len(self.config.regions_of_interest))]
 
     def process(self, frame, movements):
 
@@ -45,12 +45,14 @@ class EventHandler:
         event = self.events[idx][2]
         event.duration = (now - self.events[idx][0])
         self.logger.log(event)
-        rec: EmergencyRecorder = self.events[idx][2]
+        rec: EmergencyRecorder = self.events[idx][3]
 
         if rec is not None:
             rec.save()
 
-        self.events[idx] = (-1, -1, None)
+        print("stop")
+
+        self.events[idx] = (-1, -1, None, None)
 
     def processStartOfEvent(self, frame, idx, now):
         roi = self.config.regions_of_interest[idx]
@@ -58,15 +60,16 @@ class EventHandler:
         event = Event(datetime.now(), float(0), roi, self.count, roiFrame)
         rec: EmergencyRecorder = None
         if self.config.video.enabled:
-            rec = EmergencyRecorder(self.config, roi)
+            rec = EmergencyRecorder(self.config, event)
 
-        self.events[idx] = (now, -1, rec)
+        self.events[idx] = (now, -1, event, rec)
         self.count += 1
+        print("start")
 
     def alarmSignalization(self, delay, now, frame):
 
         for e in self.events:
-            start, end, rec = e
+            start, end, event, rec = e
 
             if rec is not None:
                 rec.append(frame)

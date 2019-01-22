@@ -2,6 +2,7 @@ from datetime import *
 import cv2
 
 from Src.Configuration.conf import RegionOfInterest, Configuration
+from Src.Process.event import Event
 
 
 class Recorder:
@@ -39,8 +40,9 @@ class EmergencyRecorder:
     SAVE_PATH = "../../events/videos/"
     fourcc = cv2.VideoWriter_fourcc(*"XVID")
 
-    def __init__(self,config: Configuration, roi: RegionOfInterest):
-        self.roi: RegionOfInterest = roi
+    def __init__(self,config: Configuration, event: Event):
+        self.roi: RegionOfInterest = event.roi
+        self.event = event
         path = self.getPathToVideo()
         self.resolution = self.getResolution()
         self.out = cv2.VideoWriter(path, self.fourcc, config.system.fps, self.resolution)
@@ -54,7 +56,7 @@ class EmergencyRecorder:
     def getPathToVideo(self):
         global count
         count += 1
-        return self.SAVE_PATH + str(self.event.time).replace(':', '-') + "#" + count + ".mp4"
+        return self.SAVE_PATH + str(self.event.time).replace(':', '-') + "#" + str(count) + ".avi"
 
     def append(self, frame):
         if self.recording:
