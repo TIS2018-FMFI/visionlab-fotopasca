@@ -16,7 +16,10 @@ class Controller:
         res = [False]*len(self.config.regions_of_interest)
 
         # konvezria na gray scale img
-        gray_img = gray_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+        gray_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+
+        for ignored in self.config.ignored_areas:
+            cv2.rectangle(gray_frame, (ignored.start.X, ignored.start.Y), (ignored.end.X, ignored.end.Y), (255, 255, 255), -1)
 
         flag = False
 
@@ -46,7 +49,7 @@ class Controller:
                     res[idx] = True
 
         self.lastFrame = gray_frame
-
+        print(res)
         return res
 
 

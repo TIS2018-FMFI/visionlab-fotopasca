@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9e73eb3c-0841-4e9f-b99c-01b336a6b0da" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/GUI/CVGui/CVRoi.py" beforeDir="false" afterPath="$PROJECT_DIR$/Src/GUI/CVGui/CVRoi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/GUI/TKGui/ConfigurationWindow.py" beforeDir="false" afterPath="$PROJECT_DIR$/Src/GUI/TKGui/ConfigurationWindow.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,14 +19,14 @@
           <entry key="project.closed" value="17" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.10" value="5" />
+          <entry key="project.open.time.10" value="6" />
           <entry key="project.open.time.11" value="4" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.6" value="2" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="17" />
+          <entry key="project.opened" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -34,25 +36,25 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="73" />
+          <entry key="py" value="91" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="73" />
+          <entry key="Python" value="91" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="6" />
-          <entry key="dummy" value="71" />
-          <entry key="py" value="10811" />
+          <entry key="dummy" value="78" />
+          <entry key="py" value="12645" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="71" />
-          <entry key="Python" value="10817" />
+          <entry key="PLAIN_TEXT" value="78" />
+          <entry key="Python" value="12651" />
         </counts>
       </usages-collector>
     </session>
@@ -60,47 +62,45 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Src/Process/systemManager.py">
+        <entry file="file://$PROJECT_DIR$/Src/GUI/GUI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="750">
-              <caret line="50" column="53" selection-start-line="50" selection-start-column="53" selection-end-line="50" selection-end-column="53" />
+            <state relative-caret-position="136">
+              <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Src/GUI/TKGui/ConfigurationWindow.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="140" column="28" lean-forward="true" selection-start-line="140" selection-start-column="28" selection-end-line="140" selection-end-column="60" />
               <folding>
-                <element signature="e#0#10#0" expanded="true" />
+                <element signature="e#0#21#0" expanded="true" />
+                <marker date="1548150438431" expanded="true" signature="6838:7582" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Src/GUI/CVGui/RuntimeWindow.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-                <marker date="1548113925245" expanded="true" signature="685:690" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Src/GUI/CVGui/RoiWindow.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="28" column="27" lean-forward="true" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
+            <state relative-caret-position="307">
+              <caret line="41" column="44" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
+                <marker date="1548155757088" expanded="true" signature="1959:2592" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Src/GUI/CVGui/CVWindow.py">
+        <entry file="file://$PROJECT_DIR$/Src/GUI/CVGui/CVSlider.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="43" lean-forward="true" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+            <state relative-caret-position="975">
+              <caret line="86" column="56" selection-start-line="86" selection-start-column="56" selection-end-line="86" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -133,23 +133,23 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/__init__.py" />
-        <option value="$PROJECT_DIR$/Src/Saver/recorder.py" />
-        <option value="$PROJECT_DIR$/Src/Process/controller.py" />
-        <option value="$PROJECT_DIR$/Src/Process/eventHandler.py" />
-        <option value="$PROJECT_DIR$/Src/Saver/logger.py" />
         <option value="$PROJECT_DIR$/Main.py" />
-        <option value="$PROJECT_DIR$/Src/Configuration/conf.py" />
-        <option value="$PROJECT_DIR$/Src/GUI/GUI.py" />
         <option value="$PROJECT_DIR$/Src/GUI/Alarm.py" />
-        <option value="$PROJECT_DIR$/Src/GUI/CVGui/CVRoi.py" />
         <option value="$PROJECT_DIR$/Src/GUI/CVGui/CVButton.py" />
         <option value="$PROJECT_DIR$/Src/GUI/CVGui/CVSlider.py" />
         <option value="$PROJECT_DIR$/Src/Process/event.py" />
-        <option value="$PROJECT_DIR$/Src/Process/systemManager.py" />
-        <option value="$PROJECT_DIR$/Src/GUI/TKGui/ConfigurationWindow.py" />
-        <option value="$PROJECT_DIR$/Src/GUI/CVGui/RoiWindow.py" />
         <option value="$PROJECT_DIR$/Src/GUI/CVGui/RuntimeWindow.py" />
         <option value="$PROJECT_DIR$/Src/GUI/CVGui/CVWindow.py" />
+        <option value="$PROJECT_DIR$/Src/GUI/CVGui/CVRoi.py" />
+        <option value="$PROJECT_DIR$/Src/GUI/TKGui/ConfigurationWindow.py" />
+        <option value="$PROJECT_DIR$/Src/Saver/logger.py" />
+        <option value="$PROJECT_DIR$/Src/Saver/recorder.py" />
+        <option value="$PROJECT_DIR$/Src/GUI/GUI.py" />
+        <option value="$PROJECT_DIR$/Src/Configuration/conf.py" />
+        <option value="$PROJECT_DIR$/Src/Process/controller.py" />
+        <option value="$PROJECT_DIR$/Src/Process/eventHandler.py" />
+        <option value="$PROJECT_DIR$/Src/Process/systemManager.py" />
+        <option value="$PROJECT_DIR$/Src/GUI/CVGui/RoiWindow.py" />
       </list>
     </option>
   </component>
@@ -178,6 +178,12 @@
               <item name="visionlabfotopasca" type="b2602c69:ProjectViewProjectNode" />
               <item name="visionlabfotopasca" type="462c0819:PsiDirectoryNode" />
               <item name="events" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="visionlabfotopasca" type="b2602c69:ProjectViewProjectNode" />
+              <item name="visionlabfotopasca" type="462c0819:PsiDirectoryNode" />
+              <item name="events" type="462c0819:PsiDirectoryNode" />
+              <item name="log" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="visionlabfotopasca" type="b2602c69:ProjectViewProjectNode" />
@@ -323,13 +329,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.34672305" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.33248407" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2089172" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32866243" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -382,77 +389,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Src/Saver/logger.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Src/Saver/recorder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/test/__init__.py" />
     <entry file="file://$PROJECT_DIR$/Src/GUI/CVGui/Saver.py" />
-    <entry file="file://$PROJECT_DIR$/Src/Configuration/conf.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="59" column="119" selection-start-line="59" selection-start-column="119" selection-end-line="59" selection-end-column="119" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Src/GUI/Alarm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Src/GUI/CVGui/CVRoi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="47" column="49" lean-forward="true" selection-start-line="47" selection-start-column="49" selection-end-line="47" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Src/GUI/CVGui/CVSlider.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1290">
-          <caret line="86" column="56" selection-start-line="86" selection-start-column="56" selection-end-line="86" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Src/GUI/GUI.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="23" lean-forward="true" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Src/Process/eventHandler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Src/Process/controller.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Src/Process/event.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -467,17 +408,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Src/GUI/TKGui/ConfigurationWindow.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="171" column="29" selection-start-line="171" selection-start-column="29" selection-end-line="171" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-            <marker date="1548113530755" expanded="true" signature="6826:7570" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Src/GUI/CVGui/CVButton.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
@@ -485,40 +415,127 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Src/GUI/CVGui/CVWindow.py">
+    <entry file="file://$PROJECT_DIR$/Src/GUI/CVGui/RuntimeWindow.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="43" lean-forward="true" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+        <state relative-caret-position="558">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1548113925245" expanded="true" signature="685:690" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Src/GUI/CVGui/RoiWindow.py">
+    <entry file="file://$PROJECT_DIR$/Src/GUI/CVGui/CVWindow.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="28" column="27" lean-forward="true" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
+        <state relative-caret-position="180">
+          <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Src/Configuration/conf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="67" column="39" selection-start-line="67" selection-start-column="39" selection-end-line="67" selection-end-column="39" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Src/GUI/CVGui/CVRoi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="33" column="16" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Src/GUI/Alarm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="19" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Src/Saver/recorder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Src/Saver/logger.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="121" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="121" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Src/Process/controller.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Src/Process/eventHandler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Src/Process/systemManager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="50" column="53" selection-start-line="50" selection-start-column="53" selection-end-line="50" selection-end-column="53" />
+        <state relative-caret-position="345">
+          <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Src/GUI/CVGui/RuntimeWindow.py">
+    <entry file="file://$PROJECT_DIR$/Src/GUI/GUI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+        <state relative-caret-position="136">
+          <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Src/GUI/CVGui/CVSlider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
+          <caret line="86" column="56" selection-start-line="86" selection-start-column="56" selection-end-line="86" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Src/GUI/TKGui/ConfigurationWindow.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="140" column="28" lean-forward="true" selection-start-line="140" selection-start-column="28" selection-end-line="140" selection-end-column="60" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+            <marker date="1548150438431" expanded="true" signature="6838:7582" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Src/GUI/CVGui/RoiWindow.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="41" column="44" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1548113925245" expanded="true" signature="685:690" ph="..." />
+            <marker date="1548155757088" expanded="true" signature="1959:2592" ph="..." />
           </folding>
         </state>
       </provider>

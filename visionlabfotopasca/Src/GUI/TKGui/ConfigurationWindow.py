@@ -134,13 +134,6 @@ class ConfigurationWindow:
         self.auto.pack(side=LEFT)
         autoFrame.grid(row=10, column=0, padx=10, pady=(0,20))
 
-        passFrame = Frame(self.root, bg="lightgray")
-        passLabel = Label(passFrame, text="heslo:", bg="lightgray",  width=10)
-        passLabel.pack(side=LEFT)
-        self.password = Entry(passFrame, width=10)
-        self.password.pack(side=LEFT)
-        passFrame.grid(row=10, column=1, padx=10, pady=(0,20))
-
         startDelayFrame = Frame(self.root, bg="lightgray")
         startDelayLabel = Label(startDelayFrame, text="oneskorenie\nštartu(s):", bg="lightgray",  width=10)
         startDelayLabel.pack(side=LEFT)
@@ -148,7 +141,14 @@ class ConfigurationWindow:
         self.startDelay.set(self.gui.config.system.initDelay)
         self.startDelay.config(bg="lightgray")
         self.startDelay.pack(side=LEFT)
-        startDelayFrame.grid(row=10, column=2, padx=10, pady=(0,20))
+        startDelayFrame.grid(row=10, column=1, padx=10, pady=(0,20))
+
+        # passFrame = Frame(self.root, bg="lightgray")
+        # passLabel = Label(passFrame, text="heslo:", bg="lightgray",  width=10)
+        # passLabel.pack(side=LEFT)
+        # self.password = Entry(passFrame, width=10)
+        # self.password.pack(side=LEFT)
+        # passFrame.grid(row=10, column=1, padx=10, pady=(0,20))
 
         div = Frame(self.root, heigh=3, bg="gray")
         div.grid(row=11, columnspan=3, sticky=E+W)

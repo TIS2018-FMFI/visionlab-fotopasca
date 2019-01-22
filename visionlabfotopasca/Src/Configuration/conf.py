@@ -11,7 +11,6 @@ class Point:
 @dataclass
 class RegionOfInterest:
     sensitivity: int
-    ignored_areas: List[Tuple[Point, Point]]
     start: Point = Point(0, 0)
     end: Point = Point(0, 0)
 
@@ -54,7 +53,8 @@ class Configuration:
         self.video: VideoSettings = VideoSettings(True)
         self.email: EmailSettings = EmailSettings(False, None)
         self.alarm: AlarmSettings = AlarmSettings(True, 5, 10)
-        self.regions_of_interest: List[RegionOfInterest] = [RegionOfInterest(0,[])]
+        self.regions_of_interest: List[RegionOfInterest] = []
+        self.ignored_areas: List[RegionOfInterest] = []
 
 
 CONF_FILE = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.realpath(__file__)))), "res/conf.obj")
@@ -74,7 +74,6 @@ def load() -> Configuration:
 # demonstration of saving configration
 if __name__ == "__main__":
     conf = Configuration()
-
 
     save(conf)
     conf2 = load()

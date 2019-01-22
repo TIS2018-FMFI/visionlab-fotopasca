@@ -19,6 +19,7 @@ class CVRoi:
         self.color = color
         self.width: int = width
         self.sensitivity = sensitivity
+        self.ignored = False
 
     def draw(self, root, sel=False):
         """
@@ -31,6 +32,8 @@ class CVRoi:
         if self.isValid():
             if sel:
                 cv2.rectangle(root, (self.x1, self.y1), (self.x2, self.y2), (0, 255, 255), 3)
+            elif self.ignored:
+                cv2.rectangle(root, (self.x1, self.y1), (self.x2, self.y2), (255, 0, 255), 3)
             else:
                 cv2.rectangle(root, (self.x1, self.y1), (self.x2, self.y2), (0, 255, 0), 3)
 

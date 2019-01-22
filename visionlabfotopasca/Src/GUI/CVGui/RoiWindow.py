@@ -39,11 +39,25 @@ class RoiWindow(CVWindow):
         for roi in self.gui.rois:
             if roi == self.sel:
                 roi.draw(self.root, sel=True)
-                self.slider.draw(self.root)
+                if roi.ignored is False:
+                    self.slider.draw(self.root)
             else:
                 roi.draw(self.root)
         self.btnConfig.draw(self.root)
         self.btnOn.draw(self.root)
+
+    def __checkIgnored(self):
+        """ Internal method for checking whether there are ignored areas. """
+        for roi in self.gui.rois:
+            roi.ignored = False
+        for i in range(len(self.gui.rois)):
+            for j in range(i + 1, len(self.gui.rois)):
+                roi1: CVRoi = self.gui.rois[i]
+                roi2: CVRoi = self.gui.rois[j]
+                if roi1.x1 > roi2.x1 and roi1.y1 > roi2.y1 and roi1.x2 < roi2.x2 and roi1.y2 < roi2.y2:
+                    roi1.ignored = True
+                elif roi2.x1 > roi1.x1 and roi2.y1 > roi1.y1 and roi2.x2 < roi1.x2 and roi2.y2 < roi1.y2:
+                    roi2.ignored = True
 
     def __mouseEvent(self):
         """ Called by constructor to set-up mouse callbacks. """
@@ -72,6 +86,7 @@ class RoiWindow(CVWindow):
             if self.sel is not None:
                 self.gui.rois.remove(self.sel)
                 self.sel = None
+                self.__checkIgnored()
 
         elif self.slider.mouseClick(x, y):
             self.slider.active = True
@@ -85,6 +100,7 @@ class RoiWindow(CVWindow):
         if self.new.isValid():
             self.gui.rois.append(self.new)
             self.new = CVRoi()
+            self.__checkIgnored()
         self.drawing = False
         self.slider.active = False
 

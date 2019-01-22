@@ -22,7 +22,6 @@ class EventHandler:
         self.events = [(-1, -1, None, None) for i in range(len(self.config.regions_of_interest))]
 
     def process(self, frame, movements):
-
         now = time()
         delay = self.config.alarm.delay
 
@@ -72,7 +71,8 @@ class EventHandler:
             start, end, event, rec = e
 
             if rec is not None:
-                rec.append(frame)
+                roi = event.roi
+                rec.append(frame[roi.start.Y:roi.end.Y, roi.start.X:roi.end.X])
 
             if not self.config.alarm.enabled:
                 continue
