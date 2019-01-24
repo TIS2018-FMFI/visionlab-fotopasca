@@ -6,8 +6,8 @@ from Src.Configuration import conf
 
 @dataclass
 class Event:
-    time : datetime
-    duration : float
-    roi : conf.RegionOfInterest
-    pictureNumber : int
-    image : np.array
+    time: datetime
+    duration: float
+    roi: conf.RegionOfInterest
+    pictureNumber: int
+    image: np.array

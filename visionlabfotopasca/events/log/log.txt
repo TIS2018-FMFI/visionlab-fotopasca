@@ -1,4 +1,341 @@
-2018-11-15 09:58:31.643532_10.5_RegionOfInterest(start=Point(X=0, Y=0), end=Point(X=0, Y=0), ignored_areas=[], sensitivity=10)#1
-2018-11-15 10:00:10.470470_10.5_RegionOfInterest(start=Point(X=0, Y=0), end=Point(X=0, Y=0), ignored_areas=[], sensitivity=10)#1
-2018-11-15 10:00:37.225071_10.5_RegionOfInterest(start=Point(X=0, Y=0), end=Point(X=0, Y=0), ignored_areas=[], sensitivity=10)#1
-2018-11-15 10:01:58.854533_10.5_RegionOfInterest(start=Point(X=0, Y=0), end=Point(X=0, Y=0), ignored_areas=[], sensitivity=10)#1
+"2018-12-20 12:18:35.950271";0.16618704795837402;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=290, Y=133), end=Point(X=599, Y=402))";0
+"2018-12-20 12:18:36.850992";0.1331949234008789;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=290, Y=133), end=Point(X=599, Y=402))";1
+"2018-12-20 12:18:37.383316";0.03454422950744629;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=290, Y=133), end=Point(X=599, Y=402))";2
+"2018-12-20 12:18:37.783296";0.1687297821044922;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=290, Y=133), end=Point(X=599, Y=402))";3
+"2019-01-22 10:56:24.103005";0.46855878829956055;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=256, Y=233), end=Point(X=590, Y=485))";0
+"2019-01-22 10:56:24.837963";0.20279479026794434;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=256, Y=233), end=Point(X=590, Y=485))";1
+"2019-01-22 10:56:25.073841";0.29815101623535156;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=256, Y=233), end=Point(X=590, Y=485))";2
+"2019-01-22 10:56:25.609292";0.23309707641601562;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=256, Y=233), end=Point(X=590, Y=485))";3
+"2019-01-22 10:56:25.872141";0.2706148624420166;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=256, Y=233), end=Point(X=590, Y=485))";4
+"2019-01-22 10:56:26.376134";0.6018121242523193;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=256, Y=233), end=Point(X=590, Y=485))";5
+"2019-01-22 10:56:27.045212";0.19965696334838867;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=256, Y=233), end=Point(X=590, Y=485))";6
+"2019-01-22 10:57:55.624627";0.5394001007080078;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=256, Y=233), end=Point(X=590, Y=485))";0
+"2019-01-22 10:57:56.196257";0.3361039161682129;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=256, Y=233), end=Point(X=590, Y=485))";1
+"2019-01-22 10:57:56.566094";0.5017406940460205;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=256, Y=233), end=Point(X=590, Y=485))";2
+"2019-01-22 10:57:57.092406";0.1094200611114502;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=256, Y=233), end=Point(X=590, Y=485))";3
+"2019-01-22 10:59:16.543693";0.2673211097717285;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=256, Y=233), end=Point(X=590, Y=485))";0
+"2019-01-22 10:59:16.845716";0.9648919105529785;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=256, Y=233), end=Point(X=590, Y=485))";1
+"2019-01-22 10:59:17.842077";0.20278024673461914;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=256, Y=233), end=Point(X=590, Y=485))";2
+"2019-01-22 11:00:36.467313";0.4033389091491699;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";0
+"2019-01-22 11:00:36.891255";0.33570408821105957;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";1
+"2019-01-22 11:00:37.261991";0.4696471691131592;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";2
+"2019-01-22 11:00:37.763018";0.06876611709594727;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";3
+"2019-01-22 11:00:37.866333";0.33504509925842285;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";4
+"2019-01-22 11:00:38.236876";0.1336839199066162;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";5
+"2019-01-22 11:00:38.403523";0.1347510814666748;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";6
+"2019-01-22 11:00:38.573151";0.12239694595336914;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";7
+"2019-01-22 11:00:38.726779";0.1447429656982422;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";8
+"2019-01-22 11:00:38.907718";0.1192178726196289;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";9
+"2019-01-22 11:00:39.062006";0.06447386741638184;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";10
+"2019-01-22 11:00:39.174697";0.1308579444885254;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";11
+"2019-01-22 11:00:39.340942";0.12433791160583496;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";12
+"2019-01-22 11:04:59.596846";0.6677072048187256;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";0
+"2019-01-22 11:05:00.297984";0.3000340461730957;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";1
+"2019-01-22 11:05:00.632294";0.1975700855255127;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";2
+"2019-01-22 11:05:00.864880";0.30142903327941895;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";3
+"2019-01-22 11:05:01.200184";0.2989919185638428;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";4
+"2019-01-22 11:05:01.533462";0.2953758239746094;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";5
+"2019-01-22 11:05:01.862631";0.06877994537353516;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";6
+"2019-01-22 11:05:01.964997";0.0668799877166748;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";7
+"2019-01-22 11:05:02.063132";0.06787681579589844;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";8
+"2019-01-22 11:05:02.166192";0.16507291793823242;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";9
+"2019-01-22 11:05:02.366242";0.16773295402526855;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";10
+"2019-01-22 11:05:02.603612";0.1625511646270752;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";11
+"2019-01-22 11:05:02.831340";0.1328599452972412;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";12
+"2019-01-22 11:05:03.028474";0.13464069366455078;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";13
+"2019-01-22 11:05:03.226361";0.20360612869262695;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";14
+"2019-01-22 11:05:03.460438";0.40697383880615234;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";15
+"2019-01-22 11:05:03.899461";0.3035757541656494;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";16
+"2019-01-22 11:05:04.234846";0.21591997146606445;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";17
+"2019-01-22 11:05:04.485643";0.15440678596496582;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";18
+"2019-01-22 11:05:04.673910";0.09954118728637695;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";19
+"2019-01-22 11:05:04.839782";0.17133021354675293;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";20
+"2019-01-22 11:05:05.042565";0.28743505477905273;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";21
+"2019-01-22 11:05:14.843189";0.13378691673278809;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";22
+"2019-01-22 11:05:15.010580";0.737123966217041;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";23
+"2019-01-22 11:05:15.790232";0.020560026168823242;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";24
+"2019-01-22 11:05:15.877590";0.03431391716003418;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";25
+"2019-01-22 11:05:15.978213";0.034728050231933594;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";26
+"2019-01-22 11:05:16.077878";0.03509211540222168;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";27
+"2019-01-22 11:05:18.550257";0.26674914360046387;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";28
+"2019-01-22 11:05:28.162134";0.04416370391845703;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";29
+"2019-01-22 11:05:39.206985";0.02099609375;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";30
+"2019-01-22 11:05:47.679585";0.2663707733154297;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";31
+"2019-01-22 11:05:48.212506";0.33428502082824707;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";32
+"2019-01-22 11:05:48.578888";0.035262346267700195;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";33
+"2019-01-22 11:06:03.358982";0.13633275032043457;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";0
+"2019-01-22 11:06:03.684508";0.10466217994689941;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";1
+"2019-01-22 11:06:03.855693";0.30602002143859863;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";2
+"2019-01-22 11:06:04.228259";0.10031390190124512;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";3
+"2019-01-22 11:06:04.359174";0.1365499496459961;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";4
+"2019-01-22 11:06:04.527036";0.036377906799316406;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";5
+"2019-01-22 11:06:04.596397";0.13341093063354492;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";6
+"2019-01-22 11:06:05.195507";0.13988804817199707;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";7
+"2019-01-22 11:06:05.768462";0.09060502052307129;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";8
+"2019-01-22 11:06:07.463332";0.4256720542907715;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";9
+"2019-01-22 11:06:07.923415";0.506112813949585;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";10
+"2019-01-22 11:06:09.357544";0.3448982238769531;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";11
+"2019-01-22 11:06:09.743521";0.31925511360168457;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";12
+"2019-01-22 11:06:10.162910";0.06448578834533691;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";13
+"2019-01-22 11:06:10.260413";0.10729002952575684;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";14
+"2019-01-22 11:06:10.432171";0.23596906661987305;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";15
+"2019-01-22 11:06:10.698061";0.2296769618988037;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";16
+"2019-01-22 11:06:11.096681";0.06986689567565918;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";17
+"2019-01-22 11:06:11.199936";0.10335063934326172;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";18
+"2019-01-22 11:06:11.437621";0.09626221656799316;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";19
+"2019-01-22 11:06:11.568042";0.1914379596710205;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";20
+"2019-01-22 11:06:11.972724";0.18770599365234375;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";21
+"2019-01-22 11:06:12.273211";0.38620471954345703;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";22
+"2019-01-22 11:06:12.938831";0.030693769454956055;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";23
+"2019-01-22 11:06:17.206974";0.030676841735839844;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";24
+"2019-01-22 11:08:01.385876";0.2114570140838623;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";0
+"2019-01-22 11:08:01.693235";0.15633893013000488;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";1
+"2019-01-22 11:08:01.883339";0.1756441593170166;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";2
+"2019-01-22 11:08:02.155071";0.13571977615356445;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";3
+"2019-01-22 11:10:01.532624";0.1708211898803711;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";0
+"2019-01-22 11:10:01.768951";0.2405850887298584;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";1
+"2019-01-22 11:10:02.665488";0.29978394508361816;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";2
+"2019-01-22 11:10:03.135161";0.3364522457122803;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";3
+"2019-01-22 11:10:05.236104";0.03438401222229004;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";4
+"2019-01-22 11:10:06.279376";0.4587550163269043;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";5
+"2019-01-22 11:10:07.080564";0.7258429527282715;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";6
+"2019-01-22 11:10:07.944477";0.2647571563720703;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";7
+"2019-01-22 11:14:46.528348";0.20615887641906738;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";0
+"2019-01-22 11:14:46.767693";0.2922091484069824;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";1
+"2019-01-22 11:14:47.094418";0.06947612762451172;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";2
+"2019-01-22 11:14:47.193482";0.9348149299621582;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";3
+"2019-01-22 11:14:48.160716";0.06611418724060059;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";4
+"2019-01-22 11:14:48.262008";0.06537914276123047;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";5
+"2019-01-22 11:14:48.363292";0.5327117443084717;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";6
+"2019-01-22 11:14:48.926796";0.33472394943237305;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";7
+"2019-01-22 11:14:49.297293";0.06830310821533203;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";8
+"2019-01-22 11:14:49.393615";0.06694483757019043;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";9
+"2019-01-22 11:14:49.495013";0.2332019805908203;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";10
+"2019-01-22 11:14:49.760051";0.1366567611694336;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";11
+"2019-01-22 11:14:49.931645";0.06512308120727539;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";12
+"2019-01-22 11:14:50.030383";0.0671539306640625;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";13
+"2019-01-22 11:14:50.130723";0.06624698638916016;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";14
+"2019-01-22 11:14:50.231683";0.13111591339111328;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";15
+"2019-01-22 11:14:50.428606";0.16553807258605957;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";16
+"2019-01-22 11:14:50.627618";0.06834626197814941;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";17
+"2019-01-22 11:14:50.729128";0.0690460205078125;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";18
+"2019-01-22 11:14:50.826758";0.17001605033874512;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";19
+"2019-01-22 11:14:51.032091";0.12992286682128906;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";20
+"2019-01-22 11:14:51.192825";0.16701197624206543;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";21
+"2019-01-22 11:14:51.392298";0.16739988327026367;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";22
+"2019-01-22 11:14:51.594829";0.03252387046813965;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";23
+"2019-01-22 11:14:51.660885";0.06813597679138184;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";24
+"2019-01-22 11:14:51.764538";0.2944760322570801;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";25
+"2019-01-22 11:14:52.092027";0.20011210441589355;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";26
+"2019-01-22 11:14:52.358276";0.16690897941589355;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";27
+"2019-01-22 11:14:52.594103";0.13395214080810547;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";28
+"2019-01-22 11:14:52.793886";0.06673502922058105;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";29
+"2019-01-22 11:14:52.904991";0.05423593521118164;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";30
+"2019-01-22 11:14:53.027917";0.1349492073059082;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";31
+"2019-01-22 11:14:53.229115";0.16388201713562012;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";32
+"2019-01-22 11:14:53.904960";0.021203041076660156;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";33
+"2019-01-22 11:14:53.961437";0.07890915870666504;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";34
+"2019-01-22 11:14:54.130351";0.0317540168762207;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";35
+"2019-01-22 11:14:54.196145";0.07727408409118652;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";36
+"2019-01-22 11:14:54.338141";0.1993718147277832;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";37
+"2019-01-22 11:14:54.594129";0.06764793395996094;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";38
+"2019-01-22 11:14:54.708806";0.06309294700622559;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";39
+"2019-01-22 11:14:54.827882";0.06917810440063477;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";40
+"2019-01-22 11:14:54.939564";0.18935179710388184;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";41
+"2019-01-22 11:14:55.159648";0.3466193675994873;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";42
+"2019-01-22 11:14:55.539318";0.19367194175720215;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";43
+"2019-01-22 11:14:55.765180";0.20353007316589355;"RegionOfInterest(sensitivity=50, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";44
+"2019-01-22 11:15:39.255088";0.033247947692871094;"RegionOfInterest(sensitivity=100, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";0
+"2019-01-22 11:15:39.323983";0.057627201080322266;"RegionOfInterest(sensitivity=100, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";1
+"2019-01-22 11:15:39.416412";0.09870314598083496;"RegionOfInterest(sensitivity=100, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";2
+"2019-01-22 11:15:39.548752";0.034232139587402344;"RegionOfInterest(sensitivity=100, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";3
+"2019-01-22 11:15:39.618744";0.06700587272644043;"RegionOfInterest(sensitivity=100, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";4
+"2019-01-22 11:15:39.718694";2.366024971008301;"RegionOfInterest(sensitivity=100, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";5
+"2019-01-22 11:15:42.151661";0.06457781791687012;"RegionOfInterest(sensitivity=100, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";6
+"2019-01-22 11:15:42.253351";0.09714984893798828;"RegionOfInterest(sensitivity=100, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";7
+"2019-01-22 11:15:55.073314";2.737248182296753;"RegionOfInterest(sensitivity=88, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";9
+"2019-01-22 11:15:58.371152";0.032176971435546875;"RegionOfInterest(sensitivity=88, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";10
+"2019-01-22 11:16:00.400670";1.7720491886138916;"RegionOfInterest(sensitivity=88, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";11
+"2019-01-22 11:16:02.667177";0.2336411476135254;"RegionOfInterest(sensitivity=88, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";12
+"2019-01-22 11:16:02.934883";0.0644979476928711;"RegionOfInterest(sensitivity=88, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";13
+"2019-01-22 11:16:38.717051";2.661073923110962;"RegionOfInterest(sensitivity=88, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";0
+"2019-01-22 11:16:41.410504";0.10432791709899902;"RegionOfInterest(sensitivity=88, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";1
+"2019-01-22 11:20:58.604925";2.24287486076355;"RegionOfInterest(sensitivity=88, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";0
+"2019-01-22 11:21:00.879079";0.26872968673706055;"RegionOfInterest(sensitivity=88, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";1
+"2019-01-22 11:37:05.424608";0.03464698791503906;"RegionOfInterest(sensitivity=88, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";0
+"2019-01-22 11:37:07.460033";0.10064315795898438;"RegionOfInterest(sensitivity=88, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";1
+"2019-01-22 11:37:08.464425";0.29975414276123047;"RegionOfInterest(sensitivity=88, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";2
+"2019-01-22 11:37:13.627247";0.06760096549987793;"RegionOfInterest(sensitivity=88, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";3
+"2019-01-22 11:37:13.762263";0.06637406349182129;"RegionOfInterest(sensitivity=88, ignored_areas=[], start=Point(X=346, Y=117), end=Point(X=563, Y=339))";4
+"2019-01-22 11:45:53.743521";0.033776044845581055;"RegionOfInterest(sensitivity=50, start=Point(X=261, Y=123), end=Point(X=642, Y=365))";0
+"2019-01-22 11:45:53.912939";0.3035929203033447;"RegionOfInterest(sensitivity=50, start=Point(X=261, Y=123), end=Point(X=642, Y=365))";1
+"2019-01-22 11:49:33.192016";0.03264117240905762;"RegionOfInterest(sensitivity=50, start=Point(X=261, Y=123), end=Point(X=642, Y=365))";0
+"2019-01-22 11:49:33.959527";0.13247895240783691;"RegionOfInterest(sensitivity=50, start=Point(X=261, Y=123), end=Point(X=642, Y=365))";1
+"2019-01-22 11:49:34.124670";0.03477287292480469;"RegionOfInterest(sensitivity=50, start=Point(X=261, Y=123), end=Point(X=642, Y=365))";2
+"2019-01-22 11:49:34.191818";0.03313612937927246;"RegionOfInterest(sensitivity=50, start=Point(X=261, Y=123), end=Point(X=642, Y=365))";3
+"2019-01-22 11:49:34.258366";0.16740703582763672;"RegionOfInterest(sensitivity=50, start=Point(X=261, Y=123), end=Point(X=642, Y=365))";4
+"2019-01-22 11:49:38.596340";0.03476595878601074;"RegionOfInterest(sensitivity=50, start=Point(X=261, Y=123), end=Point(X=642, Y=365))";5
+"2019-01-22 11:49:38.667572";0.06250500679016113;"RegionOfInterest(sensitivity=50, start=Point(X=261, Y=123), end=Point(X=642, Y=365))";6
+"2019-01-22 11:49:38.830724";0.031928062438964844;"RegionOfInterest(sensitivity=50, start=Point(X=261, Y=123), end=Point(X=642, Y=365))";7
+"2019-01-22 11:49:38.964222";0.03309273719787598;"RegionOfInterest(sensitivity=50, start=Point(X=261, Y=123), end=Point(X=642, Y=365))";8
+"2019-01-22 11:49:39.231364";0.031395912170410156;"RegionOfInterest(sensitivity=50, start=Point(X=261, Y=123), end=Point(X=642, Y=365))";9
+"2019-01-22 11:49:39.364775";0.1256089210510254;"RegionOfInterest(sensitivity=50, start=Point(X=261, Y=123), end=Point(X=642, Y=365))";10
+"2019-01-22 11:49:39.523488";0.03572511672973633;"RegionOfInterest(sensitivity=50, start=Point(X=261, Y=123), end=Point(X=642, Y=365))";11
+"2019-01-22 11:49:39.590768";0.03326082229614258;"RegionOfInterest(sensitivity=50, start=Point(X=261, Y=123), end=Point(X=642, Y=365))";12
+"2019-01-22 11:49:39.658891";0.137465238571167;"RegionOfInterest(sensitivity=50, start=Point(X=261, Y=123), end=Point(X=642, Y=365))";13
+"2019-01-22 11:49:39.862747";0.10158205032348633;"RegionOfInterest(sensitivity=50, start=Point(X=261, Y=123), end=Point(X=642, Y=365))";14
+"2019-01-22 11:49:39.996564";0.03235507011413574;"RegionOfInterest(sensitivity=50, start=Point(X=261, Y=123), end=Point(X=642, Y=365))";15
+"2019-01-22 11:49:40.064917";0.0325469970703125;"RegionOfInterest(sensitivity=50, start=Point(X=261, Y=123), end=Point(X=642, Y=365))";16
+"2019-01-22 11:49:40.128921";0.06887292861938477;"RegionOfInterest(sensitivity=50, start=Point(X=261, Y=123), end=Point(X=642, Y=365))";17
+"2019-01-22 11:49:40.230499";0.03601217269897461;"RegionOfInterest(sensitivity=50, start=Point(X=261, Y=123), end=Point(X=642, Y=365))";18
+"2019-01-22 11:49:40.298416";0.06792712211608887;"RegionOfInterest(sensitivity=50, start=Point(X=261, Y=123), end=Point(X=642, Y=365))";19
+"2019-01-22 11:49:40.400088";0.0300748348236084;"RegionOfInterest(sensitivity=50, start=Point(X=261, Y=123), end=Point(X=642, Y=365))";20
+"2019-01-22 11:49:40.464933";0.035843849182128906;"RegionOfInterest(sensitivity=50, start=Point(X=261, Y=123), end=Point(X=642, Y=365))";21
+"2019-01-22 11:49:40.666536";0.03182506561279297;"RegionOfInterest(sensitivity=50, start=Point(X=261, Y=123), end=Point(X=642, Y=365))";22
+"2019-01-22 11:49:40.732255";0.037301063537597656;"RegionOfInterest(sensitivity=50, start=Point(X=261, Y=123), end=Point(X=642, Y=365))";23
+"2019-01-22 11:49:40.835734";0.03235197067260742;"RegionOfInterest(sensitivity=50, start=Point(X=261, Y=123), end=Point(X=642, Y=365))";24
+"2019-01-22 11:49:40.899864";0.06725692749023438;"RegionOfInterest(sensitivity=50, start=Point(X=261, Y=123), end=Point(X=642, Y=365))";25
+"2019-01-22 11:49:41.034204";0.10063886642456055;"RegionOfInterest(sensitivity=50, start=Point(X=261, Y=123), end=Point(X=642, Y=365))";26
+"2019-01-22 11:49:50.377589";1.9319279193878174;"RegionOfInterest(sensitivity=89, start=Point(X=261, Y=123), end=Point(X=642, Y=365))";27
+"2019-01-22 11:49:52.339883";0.793410062789917;"RegionOfInterest(sensitivity=89, start=Point(X=261, Y=123), end=Point(X=642, Y=365))";28
+"2019-01-22 11:49:53.178533";0.46886610984802246;"RegionOfInterest(sensitivity=89, start=Point(X=261, Y=123), end=Point(X=642, Y=365))";29
+"2019-01-22 11:49:53.715009";1.0649747848510742;"RegionOfInterest(sensitivity=89, start=Point(X=261, Y=123), end=Point(X=642, Y=365))";30
+"2019-01-22 11:50:08.857094";0.23701786994934082;"RegionOfInterest(sensitivity=89, start=Point(X=261, Y=123), end=Point(X=642, Y=365))";31
+"2019-01-22 11:50:11.096137";0.33139872550964355;"RegionOfInterest(sensitivity=89, start=Point(X=261, Y=123), end=Point(X=642, Y=365))";32
+"2019-01-22 11:50:11.459062";0.47370481491088867;"RegionOfInterest(sensitivity=89, start=Point(X=261, Y=123), end=Point(X=642, Y=365))";33
+"2019-01-22 11:50:19.673258";0.49323582649230957;"RegionOfInterest(sensitivity=89, start=Point(X=261, Y=123), end=Point(X=642, Y=365))";34
+"2019-01-22 11:50:21.402319";0.3672959804534912;"RegionOfInterest(sensitivity=89, start=Point(X=261, Y=123), end=Point(X=642, Y=365))";35
+"2019-01-22 11:50:24.769777";0.36907219886779785;"RegionOfInterest(sensitivity=89, start=Point(X=261, Y=123), end=Point(X=642, Y=365))";36
+"2019-01-22 11:50:25.170130";0.10032296180725098;"RegionOfInterest(sensitivity=89, start=Point(X=261, Y=123), end=Point(X=642, Y=365))";37
+"2019-01-22 11:56:45.393690";1.2251310348510742;"RegionOfInterest(sensitivity=89, start=Point(X=261, Y=123), end=Point(X=642, Y=365))";0
+"2019-01-22 11:56:46.647556";0.10884308815002441;"RegionOfInterest(sensitivity=89, start=Point(X=261, Y=123), end=Point(X=642, Y=365))";1
+"2019-01-22 12:09:06.252463";4.276340007781982;"RegionOfInterest(sensitivity=89, start=Point(X=261, Y=123), end=Point(X=642, Y=365))";0
+"2019-01-22 12:11:45.008767";2.2703590393066406;"RegionOfInterest(sensitivity=89, start=Point(X=261, Y=123), end=Point(X=642, Y=365))";0
+"2019-01-22 12:11:47.411458";0.4943540096282959;"RegionOfInterest(sensitivity=89, start=Point(X=261, Y=123), end=Point(X=642, Y=365))";1
+"2019-01-22 12:11:48.040642";0.3042569160461426;"RegionOfInterest(sensitivity=89, start=Point(X=261, Y=123), end=Point(X=642, Y=365))";2
+"2019-01-22 12:42:35.014752";0.985598087310791;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";0
+"2019-01-22 12:42:36.032193";0.3100547790527344;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";1
+"2019-01-22 12:42:36.378598";0.062124013900756836;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";2
+"2019-01-22 12:42:36.472325";0.20090079307556152;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";3
+"2019-01-22 12:42:36.943711";0.10449099540710449;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";4
+"2019-01-22 12:42:37.072090";0.30991387367248535;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";5
+"2019-01-22 12:42:37.412361";0.16907382011413574;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";6
+"2019-01-22 12:42:37.610979";0.13264989852905273;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";7
+"2019-01-22 12:42:37.776521";0.13529396057128906;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";8
+"2019-01-22 12:42:37.943317";0.09821605682373047;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";9
+"2019-01-22 12:42:38.078008";0.13528084754943848;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";10
+"2019-01-22 12:42:38.248179";0.12797069549560547;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";11
+"2019-01-22 12:42:38.409317";0.10286808013916016;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";12
+"2019-01-22 12:42:38.576841";1.6031780242919922;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";13
+"2019-01-22 12:42:40.381080";0.13048696517944336;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";14
+"2019-01-22 12:42:40.549461";0.2321910858154297;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";15
+"2019-01-22 12:42:44.760203";0.12549901008605957;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";16
+"2019-01-22 12:42:45.587725";0.09810113906860352;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";17
+"2019-01-22 12:42:45.725674";0.07451105117797852;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";18
+"2019-01-22 12:42:45.860435";0.5625050067901611;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";19
+"2019-01-22 12:42:46.456579";3.2362282276153564;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";20
+"2019-01-22 12:42:51.629356";0.03332805633544922;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";21
+"2019-01-22 12:42:52.034742";0.1643388271331787;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";22
+"2019-01-22 12:42:52.496438";0.1657273769378662;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";23
+"2019-01-22 12:42:53.667925";0.03136301040649414;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";24
+"2019-01-22 12:42:53.731649";0.035280704498291016;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";25
+"2019-01-22 12:42:53.837244";0.030271053314208984;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";26
+"2019-01-22 12:42:53.900813";0.03940296173095703;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";27
+"2019-01-22 12:42:53.963618";0.03664708137512207;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";28
+"2019-01-22 12:42:54.136133";0.06063103675842285;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";29
+"2019-01-22 12:42:54.432685";0.03216218948364258;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";30
+"2019-01-22 12:42:54.503048";0.030699968338012695;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";31
+"2019-01-22 12:42:54.602146";0.028488874435424805;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";32
+"2019-01-22 12:42:54.664043";0.032608747482299805;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";33
+"2019-01-22 12:42:54.765841";0.03541302680969238;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";34
+"2019-01-22 12:42:54.832751";0.03786182403564453;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";35
+"2019-01-22 12:42:54.893790";0.039457082748413086;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";36
+"2019-01-22 12:42:54.961726";0.07082080841064453;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";37
+"2019-01-22 12:42:55.062144";0.03244304656982422;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";38
+"2019-01-22 12:42:55.134429";0.06422114372253418;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";39
+"2019-01-22 12:42:55.247443";0.11777210235595703;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";40
+"2019-01-22 12:42:55.394667";0.03819012641906738;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";41
+"2019-01-22 12:42:55.464356";0.05266094207763672;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";42
+"2019-01-22 12:42:55.565071";0.02999711036682129;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";43
+"2019-01-22 12:42:55.633715";0.06498098373413086;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";44
+"2019-01-22 12:42:55.730999";0.030801057815551758;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";45
+"2019-01-22 12:42:55.799441";0.037644147872924805;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";46
+"2019-01-22 12:42:55.902219";0.03271126747131348;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";47
+"2019-01-22 12:42:55.966684";0.03104400634765625;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";48
+"2019-01-22 12:42:56.132934";0.032833099365234375;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";49
+"2019-01-22 12:42:56.536471";0.02966904640197754;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";50
+"2019-01-22 12:42:56.703482";0.03152108192443848;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";51
+"2019-01-22 12:42:56.872826";0.13217902183532715;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";52
+"2019-01-22 12:42:57.066710";0.03274893760681152;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";53
+"2019-01-22 12:42:58.406921";0.09992218017578125;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";54
+"2019-01-22 12:42:58.801445";0.30538010597229004;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";55
+"2019-01-22 12:42:59.179056";0.028014183044433594;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";56
+"2019-01-22 12:43:43.736488";0.03259706497192383;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";57
+"2019-01-22 12:43:48.270707";0.031720876693725586;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";58
+"2019-01-22 12:43:48.338545";0.0322566032409668;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";59
+"2019-01-22 12:43:48.439989";0.031188011169433594;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";60
+"2019-01-22 12:43:48.503903";0.031580209732055664;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";61
+"2019-01-22 12:43:48.603775";0.033902645111083984;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";62
+"2019-01-22 12:43:48.669555";0.04913473129272461;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";63
+"2019-01-22 12:43:48.777164";0.022322893142700195;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";64
+"2019-01-22 12:43:48.834446";0.03823590278625488;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";65
+"2019-01-22 12:43:48.937631";0.03051900863647461;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";66
+"2019-01-22 12:43:49.001444";0.03654193878173828;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";67
+"2019-01-22 12:43:49.339826";0.03333401679992676;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";68
+"2019-01-22 12:43:49.404125";0.06502509117126465;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";69
+"2019-01-22 12:43:49.506292";0.0324399471282959;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";70
+"2019-01-22 12:43:49.613374";0.02446579933166504;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";71
+"2019-01-22 12:43:50.208464";0.03386092185974121;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";72
+"2019-01-22 12:43:51.309539";0.19831490516662598;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";73
+"2019-01-22 12:43:51.540589";0.06798696517944336;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";74
+"2019-01-22 12:43:51.641393";0.06668400764465332;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";75
+"2019-01-22 12:43:52.173890";0.06783819198608398;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";76
+"2019-01-22 12:43:52.277002";0.03220820426940918;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";77
+"2019-01-22 12:43:52.375848";0.032598018646240234;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";78
+"2019-01-22 12:43:52.641927";0.03385496139526367;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";79
+"2019-01-22 12:43:55.507981";0.2676081657409668;"RegionOfInterest(sensitivity=85, start=Point(X=273, Y=129), end=Point(X=606, Y=449))";80
+"2019-01-22 12:45:49.794234";0.9723830223083496;"RegionOfInterest(sensitivity=81, start=Point(X=145, Y=62), end=Point(X=372, Y=438))";0
+"2019-01-22 12:45:50.796126";0.5011391639709473;"RegionOfInterest(sensitivity=81, start=Point(X=145, Y=62), end=Point(X=372, Y=438))";1
+"2019-01-22 12:45:51.329237";0.5033290386199951;"RegionOfInterest(sensitivity=81, start=Point(X=145, Y=62), end=Point(X=372, Y=438))";2
+"2019-01-22 12:45:51.864448";0.13684821128845215;"RegionOfInterest(sensitivity=81, start=Point(X=145, Y=62), end=Point(X=372, Y=438))";3
+"2019-01-22 12:45:52.035319";0.6659471988677979;"RegionOfInterest(sensitivity=81, start=Point(X=145, Y=62), end=Point(X=372, Y=438))";4
+"2019-01-22 12:45:52.727597";0.1367480754852295;"RegionOfInterest(sensitivity=81, start=Point(X=145, Y=62), end=Point(X=372, Y=438))";5
+"2019-01-22 12:45:52.935284";0.10021090507507324;"RegionOfInterest(sensitivity=81, start=Point(X=145, Y=62), end=Point(X=372, Y=438))";6
+"2019-01-22 12:45:53.069864";0.3000221252441406;"RegionOfInterest(sensitivity=81, start=Point(X=145, Y=62), end=Point(X=372, Y=438))";7
+"2019-01-22 12:45:58.007365";4.638275861740112;"RegionOfInterest(sensitivity=97, start=Point(X=145, Y=62), end=Point(X=372, Y=438))";8
+"2019-01-22 12:46:04.114302";3.4000608921051025;"RegionOfInterest(sensitivity=97, start=Point(X=145, Y=62), end=Point(X=372, Y=438))";9
+"2019-01-22 12:46:24.633693";0.0927281379699707;"RegionOfInterest(sensitivity=97, start=Point(X=145, Y=62), end=Point(X=372, Y=438))";10
+"2019-01-22 17:28:41.175705";0.01285409927368164;"RegionOfInterest(sensitivity=50, start=Point(X=582, Y=100), end=Point(X=773, Y=275))";0
+"2019-01-22 17:28:42.533394";0.01804518699645996;"RegionOfInterest(sensitivity=50, start=Point(X=582, Y=100), end=Point(X=773, Y=275))";1
+"2019-01-22 17:35:52.809590";0.023644208908081055;"RegionOfInterest(sensitivity=50, start=Point(X=582, Y=100), end=Point(X=773, Y=275))";0
+"2019-01-22 17:35:53.807400";0.012964248657226562;"RegionOfInterest(sensitivity=50, start=Point(X=582, Y=100), end=Point(X=773, Y=275))";1
+"2019-01-22 17:35:54.816855";0.020097970962524414;"RegionOfInterest(sensitivity=50, start=Point(X=582, Y=100), end=Point(X=773, Y=275))";2
+"2019-01-22 17:48:51.072925";0.06937694549560547;"RegionOfInterest(sensitivity=50, start=Point(X=214, Y=45), end=Point(X=434, Y=343))";0
+"2019-01-22 17:48:51.240327";0.03478288650512695;"RegionOfInterest(sensitivity=50, start=Point(X=214, Y=45), end=Point(X=434, Y=343))";1
+"2019-01-22 17:49:00.441940";0.033622026443481445;"RegionOfInterest(sensitivity=88, start=Point(X=214, Y=45), end=Point(X=434, Y=343))";2
+"2019-01-22 17:49:00.578845";0.033802032470703125;"RegionOfInterest(sensitivity=88, start=Point(X=214, Y=45), end=Point(X=434, Y=343))";3
+"2019-01-22 17:49:01.651968";0.03333878517150879;"RegionOfInterest(sensitivity=88, start=Point(X=214, Y=45), end=Point(X=434, Y=343))";4
+"2019-01-22 17:49:01.707672";0.07063913345336914;"RegionOfInterest(sensitivity=88, start=Point(X=214, Y=45), end=Point(X=434, Y=343))";5
+"2019-01-22 17:49:03.815200";0.9693460464477539;"RegionOfInterest(sensitivity=88, start=Point(X=214, Y=45), end=Point(X=434, Y=343))";6
+"2019-01-22 17:49:05.010660";0.04517030715942383;"RegionOfInterest(sensitivity=88, start=Point(X=214, Y=45), end=Point(X=434, Y=343))";7
+"2019-01-22 17:49:47.597150";0.03393697738647461;"RegionOfInterest(sensitivity=88, start=Point(X=214, Y=45), end=Point(X=434, Y=343))";9
+"2019-01-22 17:49:50.567146";0.4654557704925537;"RegionOfInterest(sensitivity=88, start=Point(X=214, Y=45), end=Point(X=434, Y=343))";10
+"2019-01-22 17:49:51.066184";1.1678247451782227;"RegionOfInterest(sensitivity=88, start=Point(X=214, Y=45), end=Point(X=434, Y=343))";11
+"2019-01-22 17:49:52.266094";0.16739702224731445;"RegionOfInterest(sensitivity=88, start=Point(X=214, Y=45), end=Point(X=434, Y=343))";12
+"2019-01-22 17:49:52.463486";1.0993263721466064;"RegionOfInterest(sensitivity=88, start=Point(X=214, Y=45), end=Point(X=434, Y=343))";13
+"2019-01-22 17:49:53.599875";0.9375128746032715;"RegionOfInterest(sensitivity=88, start=Point(X=214, Y=45), end=Point(X=434, Y=343))";14
+"2019-01-22 17:50:39.877498";0.17000794410705566;"RegionOfInterest(sensitivity=88, start=Point(X=214, Y=45), end=Point(X=434, Y=343))";15
+"2019-01-22 17:50:40.081091";0.030815839767456055;"RegionOfInterest(sensitivity=88, start=Point(X=214, Y=45), end=Point(X=434, Y=343))";16
+"2019-01-22 17:50:40.145709";0.06454706192016602;"RegionOfInterest(sensitivity=88, start=Point(X=214, Y=45), end=Point(X=434, Y=343))";17
+"2019-01-22 17:50:40.247475";0.03078484535217285;"RegionOfInterest(sensitivity=88, start=Point(X=214, Y=45), end=Point(X=434, Y=343))";18
+"2019-01-22 17:50:52.861182";1.6008219718933105;"RegionOfInterest(sensitivity=88, start=Point(X=214, Y=45), end=Point(X=434, Y=343))";19
+"2019-01-22 17:50:54.500441";0.4251749515533447;"RegionOfInterest(sensitivity=88, start=Point(X=214, Y=45), end=Point(X=434, Y=343))";20
+"2019-01-22 17:50:54.956050";0.06912016868591309;"RegionOfInterest(sensitivity=88, start=Point(X=214, Y=45), end=Point(X=434, Y=343))";21
+"2019-01-22 17:50:55.056461";0.0695180892944336;"RegionOfInterest(sensitivity=88, start=Point(X=214, Y=45), end=Point(X=434, Y=343))";22
+"2019-01-22 17:50:55.156078";0.06580400466918945;"RegionOfInterest(sensitivity=88, start=Point(X=214, Y=45), end=Point(X=434, Y=343))";23
+"2019-01-22 17:50:55.257920";0.03443312644958496;"RegionOfInterest(sensitivity=88, start=Point(X=214, Y=45), end=Point(X=434, Y=343))";24
+"2019-01-22 17:50:55.355274";0.0448460578918457;"RegionOfInterest(sensitivity=88, start=Point(X=214, Y=45), end=Point(X=434, Y=343))";25
+"2019-01-22 17:50:55.455473";0.03535890579223633;"RegionOfInterest(sensitivity=88, start=Point(X=214, Y=45), end=Point(X=434, Y=343))";26
+"2019-01-22 17:50:55.562677";0.033438920974731445;"RegionOfInterest(sensitivity=88, start=Point(X=214, Y=45), end=Point(X=434, Y=343))";27
+"2019-01-22 17:50:55.824832";0.0690450668334961;"RegionOfInterest(sensitivity=88, start=Point(X=214, Y=45), end=Point(X=434, Y=343))";28
+"2019-01-22 17:51:30.461552";0.03418684005737305;"RegionOfInterest(sensitivity=88, start=Point(X=214, Y=45), end=Point(X=434, Y=343))";29

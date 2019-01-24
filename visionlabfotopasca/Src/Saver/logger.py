@@ -1,4 +1,5 @@
 from datetime import datetime as datetime
+from os import path
 import numpy as np
 import cv2
 
@@ -8,8 +9,8 @@ from Src.Configuration import conf
 
 class Logger:
 
-    LOGFILE = "..\events\log\log.txt"
-    PATH_TO_PICTURE_FILE = "..\events\images\\"
+    LOGFILE = path.join(path.dirname(path.dirname(path.dirname(path.realpath(__file__)))), "events/log/log.txt")
+    PATH_TO_PICTURE_FILE = path.join(path.dirname(path.dirname(path.dirname(path.realpath(__file__)))), "events/images/")
     
     def log(self,event : Event):
         with open(self.LOGFILE,'a') as f:
@@ -17,10 +18,10 @@ class Logger:
             
         imgName = self.PATH_TO_PICTURE_FILE + \
                   str(event.time).replace(':','-') +\
-                  "#" + str(event.pictureNumber) +  ".jpg"
+                  "#" + str(event.pictureNumber) + ".jpg"
         
-        
-        cv2.imwrite(imgName,event.image)
+        print("logujem")
+        cv2.imwrite(imgName, event.image)
 
         
 if __name__ == "__main__":
@@ -32,6 +33,3 @@ if __name__ == "__main__":
 
     logger.log(event)
 
-
-    
-   
