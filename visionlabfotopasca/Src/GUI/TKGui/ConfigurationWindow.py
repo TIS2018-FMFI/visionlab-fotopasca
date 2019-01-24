@@ -154,12 +154,23 @@ class ConfigurationWindow:
         self.startDelay.pack(side=LEFT)
         startDelayFrame.grid(row=10, column=1, padx=10, pady=(0,20))
 
+        inputFrame = Frame(self.root, bg="lightgray")
+        inputLabel = Label(inputFrame, text="vstup:", bg="lightgray",  width=10)
+        inputLabel.pack(side=LEFT)
+        self.input = Scale(inputFrame, from_=0, to=2, orient=HORIZONTAL)
+        input = self.gui.manager.INPUT
+        if type(input) is not int:
+            input = 2
+        self.input.set(input)
+        self.input.config(bg="lightgray")
+        self.input.pack(side=LEFT)
+        inputFrame.grid(row=10, column=2, padx=10, pady=(0,20))
         # passFrame = Frame(self.root, bg="lightgray")
         # passLabel = Label(passFrame, text="heslo:", bg="lightgray",  width=10)
         # passLabel.pack(side=LEFT)
         # self.password = Entry(passFrame, width=10)
         # self.password.pack(side=LEFT)
-        # passFrame.grid(row=10, column=1, padx=10, pady=(0,20))
+        # passFrame.grid(row=10, column=2, padx=10, pady=(0,20))
 
         div = Frame(self.root, heigh=3, bg="gray")
         div.grid(row=11, columnspan=3, sticky=E+W)
@@ -176,6 +187,7 @@ class ConfigurationWindow:
         self.gui.config.system.skip = bool(self.autoVar.get())
         self.gui.config.system.initDelay = self.startDelay.get()
         self.gui.config.system.cut = bool(self.cutVar.get())
+        self.gui.manager.INPUT = self.gui.manager.PATH_TO_VIDEO if self.input.get() == 2 else self.input.get()
         self.gui.STATE = self.gui.ROI_STATE
         self.root.destroy()
 
