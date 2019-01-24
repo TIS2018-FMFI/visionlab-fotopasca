@@ -17,6 +17,8 @@ class EventHandler:
         self.recording = list()
         self.events = list()
         self.count = 0
+        self.alarmStartTime = []
+        self.alarmEndTime = []
 
     def clear(self):
         self.events = [(-1, -1, None, None) for i in range(len(self.config.regions_of_interest))]
@@ -24,13 +26,16 @@ class EventHandler:
     def process(self, frame, movements):
         now = time()
         delay = self.config.alarm.delay
+        duration = self.config.alarm.duration
 
         for idx in range(len(movements)):
             if self.hasEventStarted(movements,idx):
                 self.processStartOfEvent(frame, idx, now)
+                self.alarmStartTime.append(now + delay)
 
             elif self.hasEventEnded(movements, idx):
                 self.processEndOfEvent(idx, now)
+                self.alarmEndTime.append(now + duration)
 
         self.alarmSignalization(delay, now, frame)
 
@@ -55,13 +60,17 @@ class EventHandler:
     def processStartOfEvent(self, frame, idx, now):
         roi = self.config.regions_of_interest[idx]
         roiFrame = frame[roi.start.Y:roi.end.Y, roi.start.X:roi.end.X]
-        event = Event(datetime.now(), float(0), roi, self.count, roiFrame)
+        datetime_now = datetime.now()
+        event = Event(datetime_now, float(0), roi, self.count, roiFrame)
         rec: EmergencyRecorder = None
         if self.config.video.enabled:
             rec = EmergencyRecorder(self.config, event)
 
         self.events[idx] = (now, -1, event, rec)
         self.count += 1
+
+
+
         print("start")
 
     def alarmSignalization(self, delay, now, frame):
@@ -73,12 +82,34 @@ class EventHandler:
                 roi = event.roi
                 rec.append(frame[roi.start.Y:roi.end.Y, roi.start.X:roi.end.X])
 
-            if not self.config.alarm.enabled:
-                continue
-            if start != -1:
-                diff = now - start
-                if diff >= delay:
+        now = time()
+
+        end = None
+        start = None
+
+        if self.config.alarm.enabled:
+
+            while len(self.alarmStartTime) > 0:
+                start = self.alarmStartTime[0]
+
+                if len(self.alarmEndTime) > 0:
+                    end = self.alarmEndTime[0]
+
+                if end is not None and end < now:
+                    self.alarmEndTime.pop(0)
+                    self.alarmStartTime.pop(0)
+                    end = None
+                    start = None
+                else:
+                    break
+
+            if start is not None and start < now:
+                if end is None or end > now:
                     self.alarm.play()
+
+
+
+
 
 
 
