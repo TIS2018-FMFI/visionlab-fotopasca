@@ -54,9 +54,9 @@ class SystemManager:
     def setCamera(self):
         self.cap = cv2.VideoCapture(self.INPUT)
         width, height = self.config.system.resolution
-        self.cap.set(self.CV_CAP_PROP_FPS, self.config.system.fps)
-        self.cap.set(self.CV_CAP_PROP_FRAME_WIDTH, width)
-        self.cap.set(self.CV_CAP_PROP_FRAME_HEIGHT, height)
+        #self.cap.set(self.CV_CAP_PROP_FPS, self.config.system.fps)
+        #self.cap.set(self.CV_CAP_PROP_FRAME_WIDTH, width)
+        #self.cap.set(self.CV_CAP_PROP_FRAME_HEIGHT, height)
 
     def roiMenu(self):
         self.gui.roiWindow()
@@ -93,9 +93,10 @@ class SystemManager:
             ret, frame = self.cap.read()
         if frame is None:
             frame = self.noFeedScreen()
+        else:
+            frame = self.blackBarsCrop(frame)
         frame = cv2.resize(frame, (width, height))
         return frame
-
 
     def noFeedScreen(self):
         width, height = self.config.system.resolution
@@ -104,3 +105,11 @@ class SystemManager:
                     (255, 255, 255), 1, cv2.LINE_AA)
         return frame
 
+    def blackBarsCrop(self, frame):
+        rows = numpy.where(numpy.max(frame, 0) > 0)[0]
+        if rows.size:
+            cols = numpy.where(numpy.max(frame, 1) > 0)[0]
+            frame = frame[cols[0]: cols[-1] + 1, rows[0]: rows[-1] + 1]
+        else:
+            frame = frame[:1, :1]
+        return frame
