@@ -1,4 +1,5 @@
 import cv2
+import numpy
 
 from time import time
 from os import path
@@ -12,11 +13,12 @@ from Src.Saver.recorder import Recorder
 
 class SystemManager:
     PATH_TO_VIDEO = path.join(path.dirname(path.dirname(path.dirname(path.realpath(__file__)))), "testVideo.avi")
+    INTERNAL_CAMERA = 0
+    EXTERNAL_CAMERA = 1
     CV_CAP_PROP_FRAME_WIDTH = 3
     CV_CAP_PROP_FRAME_HEIGHT = 4
     CV_CAP_PROP_FPS = 5
-    INTERNAL_CAMERA = 0
-    EXTERNAL_CAMERA = 1
+    INPUT = EXTERNAL_CAMERA
 
     def __init__(self):
         self.config: Configuration = load()
@@ -50,8 +52,7 @@ class SystemManager:
         cv2.destroyAllWindows()
 
     def setCamera(self):
-        self.cap = cv2.VideoCapture(self.INTERNAL_CAMERA)
-        #self.cap = cv2.VideoCapture(self.PATH_TO_VIDEO)
+        self.cap = cv2.VideoCapture(self.INPUT)
         width, height = self.config.system.resolution
         self.cap.set(self.CV_CAP_PROP_FPS, self.config.system.fps)
         self.cap.set(self.CV_CAP_PROP_FRAME_WIDTH, width)
@@ -59,13 +60,8 @@ class SystemManager:
 
     def roiMenu(self):
         self.gui.roiWindow()
-        width, height = self.config.system.resolution
         while self.gui.STATE == self.gui.ROI_STATE:
-            ret, frame = self.cap.read()
-            if ret is False:
-                self.setCamera()
-                ret, frame = self.cap.read()
-            frame = cv2.resize(frame, (width, height))
+            frame = self.getFrame()
             self.gui.window.loop(frame)
 
             if cv2.waitKey(1) & 0xFF == ord('q'):
@@ -73,14 +69,9 @@ class SystemManager:
 
     def runtimeMenu(self):
         self.gui.runtimeWindow()
-        width, height = self.config.system.resolution
         self.eventHandler.clear()
         while self.gui.STATE == self.gui.RUNTIME_STATE:
-            ret, frame = self.cap.read()
-            if ret is False:
-                self.setCamera()
-                ret, frame = self.cap.read()
-            frame = cv2.resize(frame, (width, height))
+            frame = self.getFrame()
 
             if self.startTime is None:
                 self.startTime = time()
@@ -93,4 +84,23 @@ class SystemManager:
 
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 self.gui.STATE = self.gui.TERMINATE_STATE
+
+    def getFrame(self):
+        width, height = self.config.system.resolution
+        ret, frame = self.cap.read()
+        if ret is False:
+            self.setCamera()
+            ret, frame = self.cap.read()
+        if frame is None:
+            frame = self.noFeedScreen()
+        frame = cv2.resize(frame, (width, height))
+        return frame
+
+
+    def noFeedScreen(self):
+        width, height = self.config.system.resolution
+        frame = numpy.zeros((height, width, 3), numpy.uint8)
+        cv2.putText(frame, "CHYBA VSTUPU", (int(width/2) - 220, 200), cv2.FONT_HERSHEY_PLAIN, 4,
+                    (255, 255, 255), 1, cv2.LINE_AA)
+        return frame
 
