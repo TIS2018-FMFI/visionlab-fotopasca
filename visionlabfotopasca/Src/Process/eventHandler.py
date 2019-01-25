@@ -21,9 +21,18 @@ class EventHandler:
         self.alarmEndTime = []
 
     def clear(self):
+        """
+        clear memory of events
+        """
         self.events = [(-1, -1, None, None) for i in range(len(self.config.regions_of_interest))]
 
     def process(self, frame, movements):
+        """
+        Process events which ocure in rois
+        :param frame: frame from camera
+        :param movements: boolean list representing motion in coresponding roi
+        :return: None
+        """
         now = time()
         delay = self.config.alarm.delay
         duration = self.config.alarm.duration
@@ -40,12 +49,30 @@ class EventHandler:
         self.alarmSignalization(delay, now, frame)
 
     def hasEventStarted(self, movements, idx):
+        """
+        Check if movent in coresponding roi to idx has started
+        :param movements: boolean list representing motion in coresponding roi
+        :param idx: idx of roi
+        :return: Boolean
+        """
         return movements[idx] is True and self.events[idx][0] == -1
 
     def hasEventEnded(self, movements, idx):
+        """
+        Check if movent in coresponding roi to idx has ended
+        :param movements: boolean list representing motion in coresponding roi
+        :param idx: idx of roi
+        :return: Boolean
+        """
         return movements[idx] is False and self.events[idx][0] != -1
 
     def processEndOfEvent(self, idx, now):
+        """
+        Set event to finished - log the event
+        :param idx: idx of roi
+        :param now: actual time in sec
+        :return: None
+        """
         event = self.events[idx][2]
         event.duration = (now - self.events[idx][0])
         self.logger.log(event)
@@ -58,6 +85,13 @@ class EventHandler:
         self.events[idx] = (-1, -1, None, None)
 
     def processStartOfEvent(self, frame, idx, now):
+        """
+        Set event as started, save frame from event and start time, optionaly starts emergency recording
+        :param frame: frame from camera
+        :param idx: idx of roi
+        :param now: actual time in sec
+        :return:  None
+        """
         roi = self.config.regions_of_interest[idx]
         roiFrame = frame[roi.start.Y:roi.end.Y, roi.start.X:roi.end.X]
         datetime_now = datetime.now()
@@ -74,7 +108,13 @@ class EventHandler:
         print("start")
 
     def alarmSignalization(self, delay, now, frame):
-
+        """
+        Alarm signalization - play alarm if is the right time, save frame of emergency recording
+        :param delay: delay of alarm after event start
+        :param now: actual time in sec
+        :param frame: frame from camera
+        :return: None
+        """
         for e in self.events:
             start, end, event, rec = e
 

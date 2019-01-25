@@ -12,6 +12,9 @@ from Src.Saver.recorder import Recorder
 
 
 class SystemManager:
+    """
+    System manager - controls the system
+    """
     PATH_TO_VIDEO = path.join(path.dirname(path.dirname(path.dirname(path.realpath(__file__)))), "testVideo.avi")
     INTERNAL_CAMERA = 0
     EXTERNAL_CAMERA = 1
@@ -21,6 +24,9 @@ class SystemManager:
     INPUT = EXTERNAL_CAMERA
 
     def __init__(self):
+        """
+        Initialize atributes - configuration, logger, recorder, controller, gui, eventhadler
+        """
         self.config: Configuration = load()
         self.logger: Logger = Logger()
         self.recorder: Recorder = Recorder(self.config)
@@ -30,6 +36,12 @@ class SystemManager:
         self.startTime = None
 
     def start(self):
+        """
+        Main program - switch between three states:
+         1) config state
+         2) roi config state
+         3) running state
+        """
         if self.config.system.skip:
             self.gui.STATE = self.gui.ROI_STATE
 
@@ -52,6 +64,9 @@ class SystemManager:
         cv2.destroyAllWindows()
 
     def setCamera(self):
+        """
+        Set attributes of camera
+        """
         self.cap = cv2.VideoCapture(self.INPUT)
         width, height = self.config.system.resolution
         #self.cap.set(self.CV_CAP_PROP_FPS, self.config.system.fps)
@@ -59,6 +74,10 @@ class SystemManager:
         #self.cap.set(self.CV_CAP_PROP_FRAME_HEIGHT, height)
 
     def roiMenu(self):
+        """
+        Roi config menu loop
+        :return:
+        """
         self.gui.roiWindow()
         while self.gui.STATE == self.gui.ROI_STATE:
             frame = self.getFrame()
@@ -68,6 +87,10 @@ class SystemManager:
                 self.gui.STATE = self.gui.TERMINATE_STATE
 
     def runtimeMenu(self):
+        """
+        Runtime loop
+        :return:
+        """
         self.gui.runtimeWindow()
         self.eventHandler.clear()
         while self.gui.STATE == self.gui.RUNTIME_STATE:
@@ -86,6 +109,10 @@ class SystemManager:
                 self.gui.STATE = self.gui.TERMINATE_STATE
 
     def getFrame(self):
+        """
+        Read frame from camera in set resolution
+        :return: frame: numpy.array
+        """
         width, height = self.config.system.resolution
         ret, frame = self.cap.read()
         if ret is False:
@@ -99,6 +126,10 @@ class SystemManager:
         return frame
 
     def noFeedScreen(self):
+        """
+        Black sreen in case of wrong input from camera
+        :return: black_screen: numpy.array
+        """
         width, height = self.config.system.resolution
         frame = numpy.zeros((height, width, 3), numpy.uint8)
         cv2.putText(frame, "CHYBA VSTUPU", (int(width/2) - 220, 200), cv2.FONT_HERSHEY_PLAIN, 4,
@@ -106,6 +137,11 @@ class SystemManager:
         return frame
 
     def blackBarsCrop(self, frame):
+        """
+        Remove the black bars from frame
+        :param frame: input frame from camera
+        :return: new_frame: numpy.array
+        """
         rows = numpy.where(numpy.max(frame, 0) > 0)[0]
         if rows.size:
             cols = numpy.where(numpy.max(frame, 1) > 0)[0]

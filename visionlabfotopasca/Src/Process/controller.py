@@ -12,6 +12,11 @@ class Controller:
         self.config: Configuration = c
 
     def isMovement(self, frame):
+        """
+        Detect movement in rois
+        :param frame: frame from camera
+        :return: movements: Boolean list of events in rois
+        """
         ## kluc je id oblasti hodnota je bool
         res = [False]*len(self.config.regions_of_interest)
 
