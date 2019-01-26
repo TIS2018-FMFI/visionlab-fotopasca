@@ -41,14 +41,13 @@ class Controller:
                 # TODO: odstranit z roi oblasti ktore tam nechceme
 
                 # spravime treshlold podla sensitivity
-                ret, thresh = cv2.threshold(rio_img, 20, 255, cv2.THRESH_BINARY)
+                ret, thresh = cv2.threshold(rio_img, 10, 255, cv2.THRESH_BINARY)
                 # percentualna zmena
                 count = np.sum(thresh)
                 count = int(count)
-                percentage_change = (count / 255) / ((roi.end.Y - roi.start.Y) * (roi.end.X - roi.start.X)) * 1000
+                percentage_change = ( (count / 255) / ((roi.end.Y - roi.start.Y) * (roi.end.X - roi.start.X))) * 1000
 
                 # print(percentage_change)
-                # aka zmena presiahla 30 percent nastala udalost co zaznacime
 
                 if percentage_change > (100 - roi.sensitivity):
                     res[idx] = True

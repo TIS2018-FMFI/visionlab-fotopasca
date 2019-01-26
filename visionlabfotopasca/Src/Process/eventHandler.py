@@ -46,7 +46,8 @@ class EventHandler:
                 self.processEndOfEvent(idx, now)
                 self.alarmEndTime.append(now + duration)
 
-        self.alarmSignalization(delay, now, frame)
+        self.alarmSignalization()
+        self.emergencyRecording(frame)
 
     def hasEventStarted(self, movements, idx):
         """
@@ -107,21 +108,11 @@ class EventHandler:
 
         print("start")
 
-    def alarmSignalization(self, delay, now, frame):
+    def alarmSignalization(self):
         """
-        Alarm signalization - play alarm if is the right time, save frame of emergency recording
-        :param delay: delay of alarm after event start
-        :param now: actual time in sec
-        :param frame: frame from camera
+        Alarm signalization - play alarm if is the right time
         :return: None
         """
-        for e in self.events:
-            start, end, event, rec = e
-
-            if rec is not None:
-                roi = event.roi
-                rec.append(frame)
-
         now = time()
 
         end = None
@@ -146,6 +137,19 @@ class EventHandler:
             if start is not None and start < now:
                 if end is None or end > now:
                     self.alarm.play()
+
+    def emergencyRecording(self, frame):
+        """
+        append frame to video if movement in roi
+        :param frame: acctual frame from camera
+        :return None:
+        """
+        for e in self.events:
+            start, end, event, rec = e
+
+            if rec is not None:
+                roi = event.roi
+                rec.append(frame)
 
 
 
