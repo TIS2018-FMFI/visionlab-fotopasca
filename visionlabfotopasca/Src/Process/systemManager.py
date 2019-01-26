@@ -12,9 +12,7 @@ from Src.Saver.recorder import Recorder
 
 
 class SystemManager:
-    """
-    System manager - controls the system
-    """
+    """ System manager - controls the system """
     PATH_TO_VIDEO = path.join(path.dirname(path.dirname(path.dirname(path.realpath(__file__)))), "testVideo.avi")
     INTERNAL_CAMERA = 0
     EXTERNAL_CAMERA = 1
@@ -24,9 +22,7 @@ class SystemManager:
     INPUT = EXTERNAL_CAMERA
 
     def __init__(self):
-        """
-        Initialize atributes - configuration, logger, recorder, controller, gui, eventhadler
-        """
+        """ Initialize attributes - configuration, logger, recorder, controller, gui, eventhandler. """
         self.config: Configuration = load()
         self.logger: Logger = Logger()
         self.recorder: Recorder = Recorder(self.config)
@@ -64,9 +60,7 @@ class SystemManager:
         cv2.destroyAllWindows()
 
     def setCamera(self):
-        """
-        Set attributes of camera
-        """
+        """ Set attributes and set the feed from camera """
         self.cap = cv2.VideoCapture(self.INPUT)
         width, height = self.config.system.resolution
         #self.cap.set(self.CV_CAP_PROP_FPS, self.config.system.fps)
@@ -74,10 +68,7 @@ class SystemManager:
         #self.cap.set(self.CV_CAP_PROP_FRAME_HEIGHT, height)
 
     def roiMenu(self):
-        """
-        Roi config menu loop
-        :return:
-        """
+        """ Roi config menu loop """
         self.gui.roiWindow()
         while self.gui.STATE == self.gui.ROI_STATE:
             frame = self.getFrame()
@@ -87,10 +78,7 @@ class SystemManager:
                 self.gui.STATE = self.gui.TERMINATE_STATE
 
     def runtimeMenu(self):
-        """
-        Runtime loop
-        :return:
-        """
+        """ Runtime loop """
         self.gui.runtimeWindow()
         self.eventHandler.clear()
         while self.gui.STATE == self.gui.RUNTIME_STATE:
@@ -127,7 +115,7 @@ class SystemManager:
 
     def noFeedScreen(self):
         """
-        Black sreen in case of wrong input from camera
+        Black screen with error message in case of wrong input from camera.
         :return: black_screen: numpy.array
         """
         width, height = self.config.system.resolution
