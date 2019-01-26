@@ -46,7 +46,7 @@ class RuntimeWindow(CVWindow):
             elif e == cv2.EVENT_LBUTTONDOWN:
                 self.__leftMouseButtonDown(x, y)
 
-        cv2.setMouseCallback('PhotoTrap', event)
+        cv2.setMouseCallback('Fotopasca', event)
 
     def __leftMouseButtonDown(self, x, y):
         if self.btnOff.mouseClick(x, y):

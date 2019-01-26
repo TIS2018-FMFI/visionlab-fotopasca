@@ -71,7 +71,7 @@ class RoiWindow(CVWindow):
             elif e == cv2.EVENT_LBUTTONDBLCLK:
                 self.__leftMouseButtonDoubleClick(x, y)
 
-        cv2.setMouseCallback('PhotoTrap', event)
+        cv2.setMouseCallback('Fotopasca', event)
 
     def __leftMouseButtonDown(self, x, y):
         if self.btnConfig.mouseClick(x, y):

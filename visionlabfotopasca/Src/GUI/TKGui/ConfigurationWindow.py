@@ -17,7 +17,7 @@ class ConfigurationWindow:
         """
         self.gui: GUI = gui
         self.root = Tk()
-        self.root.title("Config")
+        self.root.title("Nastavenia")
         self.root.resizable(0, 0)
         self.root.config(bg="lightgray")
         self.__setupOptions()

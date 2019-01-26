@@ -5,7 +5,7 @@ class CVWindow:
     def __init__(self, gui):
         self.gui = gui
         self.width, self.height = gui.config.system.resolution
-        cv2.namedWindow('PhotoTrap')
+        cv2.namedWindow('Fotopasca')
         self.root = None
 
     def loop(self, frame):
@@ -16,7 +16,7 @@ class CVWindow:
         """
         self.root = frame
         self.drawUI()
-        cv2.imshow('PhotoTrap', self.root)
+        cv2.imshow('Fotopasca', self.root)
 
     def drawUI(self):
         """Internal method called by loop() drawing the GUI of this window."""
