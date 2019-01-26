@@ -78,10 +78,15 @@ class SystemManager:
                 self.gui.STATE = self.gui.TERMINATE_STATE
 
     def runtimeMenu(self):
-        """ Runtime loop """
+        """ Runtime loop
+        send frame to GUI and to  controler, take care of fps count"""
         self.gui.runtimeWindow()
         self.eventHandler.clear()
+
+        oneTickTime = 1000/self.config.system.fps
+
         while self.gui.STATE == self.gui.RUNTIME_STATE:
+            t1 = time()
             frame = self.getFrame()
 
             if self.startTime is None:
@@ -93,7 +98,14 @@ class SystemManager:
             self.recorder.append(frame)
             self.gui.window.loop(frame)
 
-            if cv2.waitKey(1) & 0xFF == ord('q'):
+            duration = (time() - t1) * 1000 # in millis
+
+            waitTime = 1
+
+            if duration < oneTickTime:
+                waitTime  = waitTime - duration
+
+            if cv2.waitKey(waitTime) & 0xFF == ord('q'):
                 self.gui.STATE = self.gui.TERMINATE_STATE
 
     def getFrame(self):

@@ -120,7 +120,7 @@ class EventHandler:
 
             if rec is not None:
                 roi = event.roi
-                rec.append(frame[roi.start.Y:roi.end.Y, roi.start.X:roi.end.X])
+                rec.append(frame)
 
         now = time()
 
