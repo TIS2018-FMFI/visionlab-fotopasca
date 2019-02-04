@@ -8,8 +8,8 @@ from Src.Process.event import Event
 
 
 class Recorder:
-    VIDEO_PATH = path.join(path.dirname(path.dirname(path.dirname(path.realpath(__file__)))), "videos/")
-    TIMELAPSE_PATH = path.join(path.dirname(path.dirname(path.dirname(path.realpath(__file__)))), "timelapse/")
+    VIDEO_PATH = path.join(path.dirname(path.dirname(path.dirname(path.dirname(path.realpath(__file__))))), "videos/")
+    TIMELAPSE_PATH = path.join(path.dirname(path.dirname(path.dirname(path.dirname(path.realpath(__file__))))), "timelapse/")
 
     def __init__(self, config):
         """
@@ -86,7 +86,7 @@ count = 0
 
 class EmergencyRecorder:
     """recorder for event recording"""
-    SAVE_PATH = path.join(path.dirname(path.dirname(path.dirname(path.realpath(__file__)))), "events/videos/")
+    SAVE_PATH = path.join(path.dirname(path.dirname(path.dirname(path.dirname(path.realpath(__file__))))), "events/videos/")
 
     def __init__(self,config: Configuration, event: Event):
         self.roi: RegionOfInterest = event.roi

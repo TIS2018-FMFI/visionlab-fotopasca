@@ -104,8 +104,6 @@ class EventHandler:
         self.events[idx] = (now, -1, event, rec)
         self.count += 1
 
-
-
         print("start")
 
     def alarmSignalization(self):

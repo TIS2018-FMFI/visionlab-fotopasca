@@ -1,16 +1,13 @@
-from datetime import datetime as datetime
 from os import path
-import numpy as np
 import cv2
 
 from Src.Process.event import Event
-from Src.Configuration import conf
 
 
 class Logger:
 
-    LOGFILE = path.join(path.dirname(path.dirname(path.dirname(path.realpath(__file__)))), "events/log/log.txt")
-    PATH_TO_PICTURE_FILE = path.join(path.dirname(path.dirname(path.dirname(path.realpath(__file__)))), "events/images/")
+    LOGFILE = path.join(path.dirname(path.dirname(path.dirname(path.dirname(path.realpath(__file__))))), "events/log/log.txt")
+    PATH_TO_PICTURE_FILE = path.join(path.dirname(path.dirname(path.dirname(path.dirname(path.realpath(__file__))))), "events/images/")
     
     def log(self,event : Event):
         with open(self.LOGFILE,'a') as f:
@@ -22,14 +19,4 @@ class Logger:
         
         print("logujem")
         cv2.imwrite(imgName, event.image)
-
-        
-if __name__ == "__main__":
-    roi = conf.RegionOfInterest(conf.Point(0, 0), conf.Point(0, 0), [], 10)
-    img = np.zeros((100,100,3), np.uint8)
-    event = Event(datetime.now(),10.5,roi,1,img)
-
-    logger = Logger()
-
-    logger.log(event)
 

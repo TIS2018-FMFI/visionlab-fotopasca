@@ -13,7 +13,7 @@ from Src.Saver.recorder import Recorder
 
 class SystemManager:
     """ System manager - controls the system """
-    PATH_TO_VIDEO = path.join(path.dirname(path.dirname(path.dirname(path.realpath(__file__)))), "testVideo.avi")
+    PATH_TO_VIDEO = path.join(path.dirname(path.dirname(path.dirname(path.dirname(path.realpath(__file__))))), "testVideo.avi")
     INTERNAL_CAMERA = 0
     EXTERNAL_CAMERA = 1
     CV_CAP_PROP_FRAME_WIDTH = 3
@@ -62,10 +62,10 @@ class SystemManager:
     def setCamera(self):
         """ Set attributes and set the feed from camera """
         self.cap = cv2.VideoCapture(self.INPUT)
-        width, height = self.config.system.resolution
-        #self.cap.set(self.CV_CAP_PROP_FPS, self.config.system.fps)
-        #self.cap.set(self.CV_CAP_PROP_FRAME_WIDTH, width)
-        #self.cap.set(self.CV_CAP_PROP_FRAME_HEIGHT, height)
+        # width, height = self.config.system.resolution
+        # self.cap.set(self.CV_CAP_PROP_FPS, self.config.system.fps)
+        # self.cap.set(self.CV_CAP_PROP_FRAME_WIDTH, width)
+        # self.cap.set(self.CV_CAP_PROP_FRAME_HEIGHT, height)
 
     def roiMenu(self):
         """ Roi config menu loop """
@@ -79,7 +79,7 @@ class SystemManager:
 
     def runtimeMenu(self):
         """ Runtime loop
-        send frame to GUI and to  controler, take care of fps count"""
+        send frame to GUI and to  controller, take care of fps count"""
         self.gui.runtimeWindow()
         self.eventHandler.clear()
 
@@ -98,12 +98,10 @@ class SystemManager:
             self.recorder.append(frame)
             self.gui.window.loop(frame)
 
-            duration = (time() - t1) * 1000 # in millis
-
+            duration = (time() - t1) * 1000  # in millis
             waitTime = 1
-
             if duration < oneTickTime:
-                waitTime  = waitTime - duration
+                waitTime  = int(oneTickTime - duration)
 
             if cv2.waitKey(waitTime) & 0xFF == ord('q'):
                 self.gui.STATE = self.gui.TERMINATE_STATE
