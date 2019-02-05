@@ -22,8 +22,8 @@ class Recorder:
         self.timelapse = self.config.timelapse.enabled
 
         if self.timelapse:
-            fourcc = cv2.VideoWriter_fourcc(*"XVID")
-            nameTimelapse = datetime.now().strftime("%H-%M-%S") + ".avi"
+            fourcc = cv2.VideoWriter_fourcc(*'H264')
+            nameTimelapse = datetime.now().strftime("%H-%M-%S") + ".mp4"
             self.outTimelapse = cv2.VideoWriter(self.TIMELAPSE_PATH + nameTimelapse, fourcc, self.config.system.fps,
                                                 self.config.system.resolution)
 
@@ -44,9 +44,8 @@ class Recorder:
         start recording initialize writer
         :return None:
         """
-        fourcc = cv2.VideoWriter_fourcc(*"XVID")
         self.name = datetime.now().strftime("%H-%M-%S") + ".avi"
-        self.out = cv2.VideoWriter(self.VIDEO_PATH + self.name, fourcc, self.config.system.fps, self.config.system.resolution)
+        self.out = cv2.VideoWriter(self.VIDEO_PATH + self.name, -1, self.config.system.fps, self.config.system.resolution)
         self.recording = True
 
     def append(self, frame):
@@ -93,10 +92,9 @@ class EmergencyRecorder:
         self.event = event
         self.config = config
         filePath = self.getPathToVideo()
-        fourcc = cv2.VideoWriter_fourcc(*"XVID")
+        fourcc = cv2.VideoWriter_fourcc(*'H264')
 
         resolution = self.count_resolution()
-
         self.out = cv2.VideoWriter(filePath, fourcc, config.system.fps, resolution)
         self.recording = True
 
@@ -117,7 +115,7 @@ class EmergencyRecorder:
         """
         global count
         count += 1
-        return self.SAVE_PATH + str(self.event.time).replace(':', '-') + "#" + str(count) + ".avi"
+        return self.SAVE_PATH + str(self.event.time).replace(':', '-') + "#" + str(count) + ".mp4"
 
     def append(self, f):
         """
