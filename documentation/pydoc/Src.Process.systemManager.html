@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module Src.Process.systemManager</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="Src.html"><font color="#ffffff">Src</font></a>.<a href="Src.Process.html"><font color="#ffffff">Process</font></a>.systemManager</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cluk%5Cdesktop%5Cvisionlabfotopasca%5Csrc%5Cprocess%5Csystemmanager.py">c:\users\luk\desktop\visionlabfotopasca\src\process\systemmanager.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="cv2.cv2.html">cv2.cv2</a><br>
+</td><td width="25%" valign=top><a href="numpy.html">numpy</a><br>
+</td><td width="25%" valign=top><a href="ntpath.html">ntpath</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="Src.Process.systemManager.html#SystemManager">SystemManager</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="SystemManager">class <strong>SystemManager</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>System&nbsp;manager&nbsp;-&nbsp;controls&nbsp;the&nbsp;system<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="SystemManager-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Initialize&nbsp;attributes&nbsp;-&nbsp;configuration,&nbsp;logger,&nbsp;recorder,&nbsp;controller,&nbsp;gui,&nbsp;eventhandler.</tt></dd></dl>
+
+<dl><dt><a name="SystemManager-blackBarsCrop"><strong>blackBarsCrop</strong></a>(self, frame)</dt><dd><tt>Remove&nbsp;the&nbsp;black&nbsp;bars&nbsp;from&nbsp;frame<br>
+:param&nbsp;frame:&nbsp;input&nbsp;frame&nbsp;from&nbsp;camera<br>
+:return:&nbsp;new_frame:&nbsp;numpy.array</tt></dd></dl>
+
+<dl><dt><a name="SystemManager-getFrame"><strong>getFrame</strong></a>(self)</dt><dd><tt>Read&nbsp;frame&nbsp;from&nbsp;camera&nbsp;in&nbsp;set&nbsp;resolution<br>
+:return:&nbsp;frame:&nbsp;numpy.array</tt></dd></dl>
+
+<dl><dt><a name="SystemManager-noFeedScreen"><strong>noFeedScreen</strong></a>(self)</dt><dd><tt>Black&nbsp;screen&nbsp;with&nbsp;error&nbsp;message&nbsp;in&nbsp;case&nbsp;of&nbsp;wrong&nbsp;input&nbsp;from&nbsp;camera.<br>
+:return:&nbsp;black_screen:&nbsp;numpy.array</tt></dd></dl>
+
+<dl><dt><a name="SystemManager-roiMenu"><strong>roiMenu</strong></a>(self)</dt><dd><tt>Roi&nbsp;config&nbsp;menu&nbsp;loop</tt></dd></dl>
+
+<dl><dt><a name="SystemManager-runtimeMenu"><strong>runtimeMenu</strong></a>(self)</dt><dd><tt>Runtime&nbsp;loop<br>
+send&nbsp;frame&nbsp;to&nbsp;GUI&nbsp;and&nbsp;to&nbsp;&nbsp;controler,&nbsp;take&nbsp;care&nbsp;of&nbsp;fps&nbsp;count</tt></dd></dl>
+
+<dl><dt><a name="SystemManager-setCamera"><strong>setCamera</strong></a>(self)</dt><dd><tt>Set&nbsp;attributes&nbsp;and&nbsp;set&nbsp;the&nbsp;feed&nbsp;from&nbsp;camera</tt></dd></dl>
+
+<dl><dt><a name="SystemManager-start"><strong>start</strong></a>(self)</dt><dd><tt>Main&nbsp;program&nbsp;-&nbsp;switch&nbsp;between&nbsp;three&nbsp;states:<br>
+&nbsp;1)&nbsp;config&nbsp;state<br>
+&nbsp;2)&nbsp;roi&nbsp;config&nbsp;state<br>
+&nbsp;3)&nbsp;running&nbsp;state</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>CV_CAP_PROP_FPS</strong> = 5</dl>
+
+<dl><dt><strong>CV_CAP_PROP_FRAME_HEIGHT</strong> = 4</dl>
+
+<dl><dt><strong>CV_CAP_PROP_FRAME_WIDTH</strong> = 3</dl>
+
+<dl><dt><strong>EXTERNAL_CAMERA</strong> = 1</dl>
+
+<dl><dt><strong>INPUT</strong> = 1</dl>
+
+<dl><dt><strong>INTERNAL_CAMERA</strong> = 0</dl>
+
+<dl><dt><strong>PATH_TO_VIDEO</strong> = r'C:\Users\luk\Desktop\visionlabfotopasca\testVideo.avi'</dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-time"><strong>time</strong></a>(...)</dt><dd><tt><a href="#-time">time</a>()&nbsp;-&gt;&nbsp;floating&nbsp;point&nbsp;number<br>
+&nbsp;<br>
+Return&nbsp;the&nbsp;current&nbsp;time&nbsp;in&nbsp;seconds&nbsp;since&nbsp;the&nbsp;Epoch.<br>
+Fractions&nbsp;of&nbsp;a&nbsp;second&nbsp;may&nbsp;be&nbsp;present&nbsp;if&nbsp;the&nbsp;system&nbsp;clock&nbsp;provides&nbsp;them.</tt></dd></dl>
+</td></tr></table>
+</body></html>
