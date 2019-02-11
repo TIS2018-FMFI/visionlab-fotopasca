@@ -12,7 +12,7 @@ from Src.Saver.recorder import Recorder
 
 
 class SystemManager:
-    """ System manager - controls the system """
+    """ System manager - controls the system. """
     PATH_TO_VIDEO = path.join(path.dirname(path.dirname(path.dirname(path.dirname(path.realpath(__file__))))), "testVideo.avi")
     INTERNAL_CAMERA = 0
     EXTERNAL_CAMERA = 1
@@ -22,7 +22,7 @@ class SystemManager:
     INPUT = EXTERNAL_CAMERA
 
     def __init__(self):
-        """ Initialize attributes - configuration, logger, recorder, controller, gui, eventhandler. """
+        """ Initialize attributes - configuration, logger, recorder, controller, gui, event-handler. """
         self.config: Configuration = load()
         self.logger: Logger = Logger()
         self.recorder: Recorder = Recorder(self.config)
@@ -33,7 +33,7 @@ class SystemManager:
 
     def start(self):
         """
-        Main program - switch between three states:
+        Main program - switches between three states:
          1) config state
          2) roi config state
          3) running state
@@ -60,15 +60,11 @@ class SystemManager:
         cv2.destroyAllWindows()
 
     def setCamera(self):
-        """ Set attributes and set the feed from camera """
+        """ Set attributes and set the feed from camera. """
         self.cap = cv2.VideoCapture(self.INPUT)
-        # width, height = self.config.system.resolution
-        # self.cap.set(self.CV_CAP_PROP_FPS, self.config.system.fps)
-        # self.cap.set(self.CV_CAP_PROP_FRAME_WIDTH, width)
-        # self.cap.set(self.CV_CAP_PROP_FRAME_HEIGHT, height)
 
     def roiMenu(self):
-        """ Roi config menu loop """
+        """ Region of interest config menu loop. """
         self.gui.roiWindow()
         while self.gui.STATE == self.gui.ROI_STATE:
             frame = self.getFrame()
@@ -78,8 +74,7 @@ class SystemManager:
                 self.gui.STATE = self.gui.TERMINATE_STATE
 
     def runtimeMenu(self):
-        """ Runtime loop
-        send frame to GUI and to  controller, take care of fps count"""
+        """ Runtime loop, sends frame to GUI and to controller and takes care of fps count. """
         self.gui.runtimeWindow()
         self.eventHandler.clear()
 
@@ -108,8 +103,8 @@ class SystemManager:
 
     def getFrame(self):
         """
-        Read frame from camera in set resolution
-        :return: frame: numpy.array
+        Read frame from camera in set resolution.
+        :return: frame: numpy.array representing a frame from camera
         """
         width, height = self.config.system.resolution
         ret, frame = self.cap.read()
@@ -136,7 +131,7 @@ class SystemManager:
 
     def blackBarsCrop(self, frame):
         """
-        Remove the black bars from frame
+        Remove the black bars from frame.
         :param frame: input frame from camera
         :return: new_frame: numpy.array
         """

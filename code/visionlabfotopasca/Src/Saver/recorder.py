@@ -13,8 +13,8 @@ class Recorder:
 
     def __init__(self, config):
         """
-        initialize recorder for timelapse and video
-        :param config:
+        Initialize recorder for time-lapse and video.
+        :param config: reference to the system configuration
         """
         self.config = config
         self.recording = False
@@ -31,7 +31,7 @@ class Recorder:
 
     def toggle(self):
         """
-        toggle
+        Toggle for recording a manual video.
         :return None:
         """
         if self.recording:
@@ -40,18 +40,15 @@ class Recorder:
             self.start()
 
     def start(self):
-        """
-        start recording initialize writer
-        :return None:
-        """
+        """ Start recording, initialize writer. """
         self.name = datetime.now().strftime("%H-%M-%S") + ".avi"
         self.out = cv2.VideoWriter(self.VIDEO_PATH + self.name, -1, self.config.system.fps, self.config.system.resolution)
         self.recording = True
 
     def append(self, frame):
         """
-        add actuall frame to video file and timelapse file
-        :param frame:
+        Add actual frame to video file and time-lapse file.
+        :param frame: frame to add
         :return None:
         """
         if self.recording:
@@ -64,7 +61,7 @@ class Recorder:
 
     def save(self):
         """
-        finish recording and save result to file
+        Finish recording and save result to a file.
         :return None:
         """
         if self.recording:
@@ -73,7 +70,7 @@ class Recorder:
 
     def endTimelapse(self):
         """
-        finish timelapse recording and save result to file
+        Finish time-lapse recording and save result to a file.
         :return None:
         """
         if self.timelapse:
@@ -84,7 +81,7 @@ count = 0
 
 
 class EmergencyRecorder:
-    """recorder for event recording"""
+    """ Recorder class for event recording. """
     SAVE_PATH = path.join(path.dirname(path.dirname(path.dirname(path.dirname(path.realpath(__file__))))), "events/videos/")
 
     def __init__(self,config: Configuration, event: Event):
@@ -99,8 +96,9 @@ class EmergencyRecorder:
         self.recording = True
 
     def count_resolution(self):
-        """ get resolution - if cut flag is set in configuration count it
-            :return resolution : tuple of integers (width, height)
+        """
+        Get resolution - if cut flag is set in configuration count it.
+        :return resolution : tuple of integers (width, height)
         """
         if self.config.system.cut:
             resolution = (self.event.roi.end.X - self.event.roi.start.X, self.event.roi.end.Y - self.event.roi.start.Y)
@@ -110,7 +108,7 @@ class EmergencyRecorder:
 
     def getPathToVideo(self):
         """
-        create new name for next video file
+        Create new name for next video file.
         :return path: string path to new video file
         """
         global count
@@ -119,8 +117,8 @@ class EmergencyRecorder:
 
     def append(self, f):
         """
-        Write frame to video
-        :param f: acctual frame from camera
+        Write frame to video.
+        :param f: actual frame from camera
         :return None:
         """
         if self.recording:
@@ -132,7 +130,7 @@ class EmergencyRecorder:
 
     def save(self):
         """
-        finish the recording and save it to file
+        Finish the recording and save it to a file.
         :return None:
         """
         if self.recording:

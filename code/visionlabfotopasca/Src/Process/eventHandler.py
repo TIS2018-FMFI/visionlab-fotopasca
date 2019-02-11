@@ -21,16 +21,14 @@ class EventHandler:
         self.alarmEndTime = []
 
     def clear(self):
-        """
-        clear memory of events
-        """
+        """ Clear memory of events. """
         self.events = [(-1, -1, None, None) for i in range(len(self.config.regions_of_interest))]
 
     def process(self, frame, movements):
         """
-        Process events which ocure in rois
+        Process events which occur in rois.
         :param frame: frame from camera
-        :param movements: boolean list representing motion in coresponding roi
+        :param movements: boolean list representing motion in corresponding roi
         :return: None
         """
         now = time()
@@ -51,8 +49,8 @@ class EventHandler:
 
     def hasEventStarted(self, movements, idx):
         """
-        Check if movent in coresponding roi to idx has started
-        :param movements: boolean list representing motion in coresponding roi
+        Check if there is a movement in roi corresponding to a given idx.
+        :param movements: boolean list representing motion in rois
         :param idx: idx of roi
         :return: Boolean
         """
@@ -60,8 +58,8 @@ class EventHandler:
 
     def hasEventEnded(self, movements, idx):
         """
-        Check if movent in coresponding roi to idx has ended
-        :param movements: boolean list representing motion in coresponding roi
+        Check if movement in roi corresponding to a given idx has ended.
+        :param movements: boolean list representing motion in rois
         :param idx: idx of roi
         :return: Boolean
         """
@@ -69,7 +67,7 @@ class EventHandler:
 
     def processEndOfEvent(self, idx, now):
         """
-        Set event to finished - log the event
+        Set event to finished - log the event.
         :param idx: idx of roi
         :param now: actual time in sec
         :return: None
@@ -87,7 +85,7 @@ class EventHandler:
 
     def processStartOfEvent(self, frame, idx, now):
         """
-        Set event as started, save frame from event and start time, optionaly starts emergency recording
+        Set event as started, save frame from event and start time, optionally starts emergency recording.
         :param frame: frame from camera
         :param idx: idx of roi
         :param now: actual time in sec
@@ -108,7 +106,7 @@ class EventHandler:
 
     def alarmSignalization(self):
         """
-        Alarm signalization - play alarm if is the right time
+        Alarm signalization - play alarm if is the right time.
         :return: None
         """
         now = time()
@@ -138,15 +136,14 @@ class EventHandler:
 
     def emergencyRecording(self, frame):
         """
-        append frame to video if movement in roi
-        :param frame: acctual frame from camera
+        Append frame to video if there is a movement in roi.
+        :param frame: actual frame from camera
         :return None:
         """
         for e in self.events:
             start, end, event, rec = e
 
             if rec is not None:
-                roi = event.roi
                 rec.append(frame)
 
 

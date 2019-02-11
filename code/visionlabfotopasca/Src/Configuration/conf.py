@@ -3,10 +3,12 @@ from dataclasses import dataclass
 from typing import List, Tuple
 import pickle
 
+
 @dataclass
 class Point:
     X: int
     Y: int
+
 
 @dataclass
 class RegionOfInterest:
@@ -14,25 +16,30 @@ class RegionOfInterest:
     start: Point = Point(0, 0)
     end: Point = Point(0, 0)
 
+
 @dataclass
 class TimelapseSettings:
     enabled: bool
     capture_speed: int
 
+
 @dataclass
 class VideoSettings:
     enabled: bool
-    
+
+
 @dataclass
 class EmailSettings:
     enabled: bool
     email: str
+
 
 @dataclass
 class AlarmSettings:
     enabled: bool
     delay: int
     duration: int
+
 
 @dataclass
 class SystemSettings:
@@ -45,7 +52,6 @@ class SystemSettings:
     cut: bool
 
 
-#@dataclass
 class Configuration:
 
     def __init__(self):
