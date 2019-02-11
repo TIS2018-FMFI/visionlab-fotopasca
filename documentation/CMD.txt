@@ -1,0 +1,2 @@
+pyinstaller --noconsole --icon=icon.ico Main.py
+python -m pydoc -w .\
